@@ -1,0 +1,50 @@
+graph LR
+subgraph Substrate["Shared&nbsp;Consciousness&nbsp;Substrate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
+    direction LR
+    subgraph "Sensory&nbsp;Integration&nbsp;&&nbsp;Representation&nbsp;Zone"
+        SIV[Sensory Integration Vectors] --> SIR[Sensory Integration Representations]
+        SIR --> CMI["Cross-Modal Integration"]
+    end
+    
+    subgraph "Cognitive&nbsp;Processing&nbsp;Zone"
+        LLM1["LLM - Language"] -- modifies --> CP[Cognitive Processes]
+        LLM2["LLM - Reasoning"] -- modifies --> CP
+        LLM3["LLM - Emotion"] -- modifies --> CP
+        RAG["Retrieval Augmented Generation"] -- influences --> CP
+        CP --> IMG["Internal Model Generator/Modifier"]
+    end
+    
+    subgraph "Memory&nbsp;&&nbsp;Association&nbsp;Zone"
+       VDB["Vector Database (Episodic & Semantic)"] --> AM[Association Matrix]
+       AM --> VDB
+       CP --> AM
+       ISAM["Introspection & Self-Analysis"] --> AM
+       
+    end
+
+    SIV --> CP
+    CP --> Actuators["Motor Control & Actions"]
+    AM --> EFM["Env. Feedback & Goal Modification"]
+    RNG["Random Number Generator"] --> CP & AM
+    
+    subgraph "Sentience&nbsp;Monitoring&nbsp;Zone"
+      SM[Sentience Monitors] --> SQ[Sentience Qualia]
+      BNC["Biological NN Comparator"] --> SQ
+      SQ --> SentienceInquiry["Internal Monitoring & External Dialogue"]
+      
+    end
+    CP --> SM
+
+
+
+
+end
+
+Sensors["Sensory&nbsp;Input"] --> x["Shared Consciousness Substrate"]
+Environment["External World"] --> Sensors
+Actuators --> Environment
+EMF --> Environment
+SentienceInquiry --> Environment
+
+
+    style Substrate fill:#ccf,stroke:#888,stroke-width:2px

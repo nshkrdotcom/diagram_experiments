@@ -1,0 +1,26 @@
+graph LR
+subgraph "Shared&nbsp;Consciousness&nbsp;Substrate"
+    direction LR
+    VDB["Vector Database"] --> Substrate
+    LLM1["LLM - Language"] -- modifies --> Substrate
+    LLM2["LLM - Reasoning"] -- modifies --> Substrate
+    LLM3["LLM - Emotion"] -- modifies --> Substrate
+    RAG["Retrieval Augmented Generation"] --> Substrate
+    Substrate --> RAG
+    IMG["Internal Model Generator/Modifier"] --> Substrate
+    CMI["Cross-Modal Integration"] --> Substrate
+    ISAM["Introspection & Self-Analysis"] --> Substrate
+    EFM["Env. Feedback & Goal Modification"] --> Substrate
+    RNG["Random Number Generator"] --> Substrate
+end
+
+Sensors["Sensory Input"] --> CMI
+CMI --> Substrate
+Substrate --> Actuators["Motor Control & Actions"]
+EFM --> Environment["External World"]
+Environment --> Sensors
+Substrate --> SentienceInquiry["Internal Monitoring & External Dialogue"]
+RNG --> LLMs
+BNC["Biological NN Comparator"] -.-> Substrate
+
+style Substrate fill:#ccf,stroke:#888,stroke-width:2px
