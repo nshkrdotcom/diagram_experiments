@@ -1,9 +1,9 @@
 graph 
-    subgraph Environment["Test Environment"]
+    subgraph Environment["Test&nbsp;Environment"]
         Stimulus["Controlled Stimuli (Pain/Pleasure, etc.)"] --> RobotA & RobotB
     end
 
-    subgraph RobotA["Robot A (Biological Substrate)"]
+    subgraph RobotA["Robot&nbsp;A&nbsp;(Biological&nbsp;Substrate)"]
         subgraph Sensors_ActuatorsA["Sensors & Actuators"]
             SensorsA["Sensors (simulated skin)"] --> PreprocessorA["Sensor Preprocessor"]
             PreprocessorA --> QualiaModuleA
@@ -13,13 +13,13 @@ graph
         end
         
 
-        subgraph AI_A["AI System"]
+        subgraph AI_A["AI&nbsp;System"]
             AISiliconA["Silicon-based AI"]
             QualiaModuleA["Biological Qualia Module (AlphaCell/Neural Organoid)"] --> BioIntegratorA["Bio-Integration Module"]
             BioIntegratorA --> AISiliconA
             AISiliconA --> ActionPlanningA["Action Planning"]
 
-            subgraph Sentience_Monitoring_A["Sentience Monitoring"]
+            subgraph Sentience_Monitoring_A["Sentience&nbsp;Monitoring"]
                 SMA["Sentience Monitors"] --> SQA["Qualia Analysis"]
                 SQA --> OutputA["Response/Behavior/Report"]
             end
@@ -30,8 +30,8 @@ graph
     end
 
 
-    subgraph RobotB["Robot B (Simulated Substrate)"]
-         subgraph Sensors_ActuatorsB["Sensors & Actuators"]
+    subgraph RobotB["Robot&nbsp;B&nbsp;(Simulated&nbsp;Substrate)"]
+         subgraph Sensors_ActuatorsB["Sensors&nbsp;&&nbsp;Actuators"]
             SensorsB["Sensors (simulated skin)"] --> PreprocessorB["Sensor Preprocessor"]
              PreprocessorB --> QualiaModuleB
             ActionPlanningB --> MotorControlB["Motor Control"]
@@ -39,12 +39,12 @@ graph
 
         end
 
-        subgraph AI_B["AI System"]
+        subgraph AI_B["AI&nbsp;System"]
             AISiliconB["Silicon-based AI"]
            QualiaModuleB["Simulated Qualia Module"] -->  AISiliconB
             AISiliconB --> ActionPlanningB["Action Planning"]
 
-            subgraph Sentience_Monitoring_B["Sentience Monitoring"]
+            subgraph Sentience_Monitoring_B["Sentience&nbsp;Monitoring"]
                 SMB["Sentience Monitors"] --> SQB["Qualia Analysis"]
                 SQB --> OutputB["Response/Behavior/Report"]
             end
