@@ -1,0 +1,61 @@
+graph 
+    subgraph Environment["Test Environment"]
+        Stimulus["Controlled Stimuli (Pain/Pleasure, etc.)"] --> RobotA & RobotB
+    end
+
+    subgraph RobotA["Robot A (Biological Substrate)"]
+        subgraph Sensors_Actuators["Sensors & Actuators"]
+            SensorsA["Sensors (simulated skin)"] --> PreprocessorA["Sensor Preprocessor"]
+            PreprocessorA --> QualiaModuleA
+             MotorControlA["Motor Control"] --> ActuatorsA["Actuators"]
+
+             ActionPlanningA --> MotorControlA
+        end
+        
+
+        subgraph AI_A["AI System"]
+            AISiliconA["Silicon-based AI"]
+            QualiaModuleA["Biological Qualia Module (AlphaCell/Neural Organoid)"] --> BioIntegratorA["Bio-Integration Module"]
+            BioIntegratorA --> AISiliconA
+            AISiliconA --> ActionPlanningA["Action Planning"]
+
+            subgraph Sentience_Monitoring_A["Sentience Monitoring"]
+                SMA["Sentience Monitors"] --> SQA["Qualia Analysis"]
+                SQA --> OutputA["Response/Behavior/Report"]
+            end
+            AISiliconA --> SMA
+        end
+          PreprocessorA --> QualiaModuleA
+          QualiaModuleA --> AI_A
+    end
+
+
+    subgraph RobotB["Robot B (Simulated Substrate)"]
+         subgraph Sensors_ActuatorsB["Sensors & Actuators"]
+            SensorsB["Sensors (simulated skin)"] --> PreprocessorB["Sensor Preprocessor"]
+             PreprocessorB --> QualiaModuleB
+            ActionPlanningB --> MotorControlB["Motor Control"]
+             MotorControlB --> ActuatorsB["Actuators"]
+
+        end
+
+        subgraph AI_B["AI System"]
+            AISiliconB["Silicon-based AI"]
+           QualiaModuleB["Simulated Qualia Module"] -->  AISiliconB
+            AISiliconB --> ActionPlanningB["Action Planning"]
+
+            subgraph Sentience_Monitoring_B["Sentience Monitoring"]
+                SMB["Sentience Monitors"] --> SQB["Qualia Analysis"]
+                SQB --> OutputB["Response/Behavior/Report"]
+            end
+                AISiliconB --> SMB
+        end
+        PreprocessorB --> QualiaModuleB
+
+    end
+    ActuatorsA --> Environment
+    ActuatorsB --> Environment
+    OutputA & OutputB --> Comparator["Comparator (A/B Testing)"]
+
+    style QualiaModuleA fill:#ccf,stroke:#888,stroke-width:2px
+    style BioIntegratorA fill:#aaf,stroke:#666,stroke-width:2px
