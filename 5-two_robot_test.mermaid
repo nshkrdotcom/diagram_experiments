@@ -1,0 +1,68 @@
+graph 
+ 
+    subgraph Environment["Test Environment"]
+        Stimulus["Controlled Stimuli (Visual, Auditory, Tactile, etc.)"] --> RobotA
+        Stimulus --> RobotB
+    end
+
+    subgraph RobotA["Robot A (Bioelectric Skin)"]
+        subgraph Physical_Body_A["Physical Body"]
+            SensorsA["Sensors"] --> PreprocessorA["Sensor Preprocessor"]
+            PreprocessorA --> BioSkin["Bioelectric Skin (AlphaCell-based)"]
+                BioSkin --> Bioelectric_Signals["Bioelectric Signals"]
+                Bioelectric_Signals --> AI_A
+            VisionA[Camera] --> VisionPreprocessorA["Vision Preprocessor"]
+            AudioA[Microphone] --> AudioPreprocessorA["Audio Preprocessor"]
+            VisionPreprocessorA & AudioPreprocessorA --> AI_A
+            PreprocessorA --> MotorControlA["Motor Control"]
+            MotorControlA --> ActuatorsA["Actuators"]
+            
+        end
+
+
+        subgraph AI_A["AI System"]
+            AISilicon["Silicon-based AI"]
+            Bioelectric_Signals --> BioIntegrator["Bio-Integration Module"]
+            BioIntegrator --> AISilicon
+            AISilicon --> ActionPlanningA["Action Planning"]
+            ActionPlanningA --> MotorControlA
+
+            subgraph Sentience_Monitoring_A["Sentience Monitoring"]
+                SMA["Sentience Monitors"] --> SQA["Qualia Analysis"]
+                SQA --> OutputA["Response/Behavior/Report"]
+            end
+            AISilicon --> SMA
+      end
+    end
+
+    subgraph RobotB["Robot B (Control)"]
+        direction LR
+         subgraph Physical_Body_B["Physical Body"]
+            SensorsB["Sensors"] --> PreprocessorB["Sensor Preprocessor"]
+            VisionB[Camera] --> VisionPreprocessorB["Vision Preprocessor"]
+            AudioB[Microphone] --> AudioPreprocessorB["Audio Preprocessor"]
+            VisionPreprocessorB & AudioPreprocessorB & PreprocessorB --> AI_B
+            PreprocessorB --> MotorControlB["Motor Control"]
+            MotorControlB --> ActuatorsB["Actuators"]
+
+        end
+                subgraph AI_B["AI System"]
+            AISiliconB["Silicon-based AI"]
+            AISiliconB --> ActionPlanningB["Action Planning"]
+            ActionPlanningB --> MotorControlB
+
+            subgraph Sentience_Monitoring_B["Sentience Monitoring"]
+                SMB["Sentience Monitors"] --> SQB["Qualia Analysis"]
+                SQB --> OutputB["Response/Behavior/Report"]
+            end
+                AISiliconB --> SMB
+        end
+
+    end
+
+    ActuatorsA --> Environment
+    ActuatorsB --> Environment
+
+    OutputA & OutputB --> Comparator["Comparator (A/B Testing)"]
+    style BioSkin fill:#ccf,stroke:#888,stroke-width:2px
+    style BioIntegrator fill:#aaf,stroke:#666,stroke-width:2px_
