@@ -4,7 +4,7 @@ graph
     end
 
     subgraph RobotA["Robot A (Biological Substrate)"]
-        subgraph Sensors_Actuators["Sensors & Actuators"]
+        subgraph Sensors_ActuatorsA["Sensors & Actuators"]
             SensorsA["Sensors (simulated skin)"] --> PreprocessorA["Sensor Preprocessor"]
             PreprocessorA --> QualiaModuleA
              MotorControlA["Motor Control"] --> ActuatorsA["Actuators"]
@@ -53,8 +53,8 @@ graph
         PreprocessorB --> QualiaModuleB
 
     end
-    ActuatorsA --> Environment
-    ActuatorsB --> Environment
+    ActuatorsA --> Stimulus
+    ActuatorsB --> Stimulus
     OutputA & OutputB --> Comparator["Comparator (A/B Testing)"]
 
     style QualiaModuleA fill:#ccf,stroke:#888,stroke-width:2px
