@@ -1,0 +1,59 @@
+graph 
+    subgraph Robot
+        subgraph PB["Physical&nbsp;Body"]
+            Sensors["Tactile Sensors"] --> SensorPreprocessor["Sensor Preprocessor"]
+            Vision[Camera] --> VisionPreprocessor["Vision Preprocessor"]
+            Audio[Microphone] --> AudioPreprocessor["Audio Preprocessor"]
+            HumanUI["Human Interface (Display/Keyboard)"] --> UIPreprocessor["UI Preprocessor"]
+            SensorPreprocessor --> MotorControl["Motor Control & Actions"]
+            VisionPreprocessor --> MotorControl
+            AudioPreprocessor --> MotorControl
+            UIPreprocessor --> MotorControl
+            MotorControl --> Actuators["Actuators (Movement, Manipulation)"]
+            Actuators --> Environment["Physical Environment"]
+            Environment --> Sensors
+            Environment --> Vision
+            Environment --> Audio
+        end
+    end
+
+    subgraph AI["AI&nbsp;Internals"]
+        subgraph SCS["Shared&nbsp;Consciousness&nbsp;Substrate"]
+            subgraph "Sensory&nbsp;Integration&nbsp;&amp;&nbsp;Representation&nbsp;Zone"
+                SIV[Sensory Integration Vectors] --> SIR[Sensory Integration Representations]
+                SIR --> CMI["Cross-Modal Integration"]
+            end
+            subgraph "Cognitive&nbsp;Processing&nbsp;Zone"
+                LLM1["LLM - Language"] -- modifies --> CP[Cognitive Processes]
+                LLM2["LLM - Reasoning"] -- modifies --> CP
+                LLM3["LLM - Emotion"] -- modifies --> CP
+                RAG["Retrieval Augmented Generation"] -- influences --> CP
+                CP --> IMG["Internal Model Generator/Modifier"]
+            end
+            subgraph "Memory&nbsp;&amp;&nbsp;Association&nbsp;Zone"
+                VDB["Vector Database (Episodic & Semantic)"] --> AM[Association Matrix]
+                AM --> VDB
+                CP --> AM
+                ISAM["Introspection & Self-Analysis"] --> AM
+            end
+            SIV --> CP
+            CP --> ActionPlanning["Action Planning & Decision Making"]
+            AM --> EFM["Env. Feedback & Goal Modification"]
+            RNG["Random Number Generator"] --> CP & AM
+            subgraph "Sentience&nbsp;Monitoring&nbsp;Zone"
+                SM[Sentience Monitors] --> SQ[Sentience Qualia]
+                BNC["Biological NN Comparator"] --> SQ
+                SQ --> SentienceInquiry["Internal Monitoring & External Dialogue"]
+            end
+            CP --> SM
+        end
+        SensorPreprocessor --> SCS
+        VisionPreprocessor --> SCS
+        AudioPreprocessor --> SCS
+        UIPreprocessor --> SCS
+        ActionPlanning --> MotorControl
+        EFM --> Environment
+        SentienceInquiry --> HumanUI
+    end
+
+    style SCS fill:#ccf,stroke:#888,stroke-width:2px
