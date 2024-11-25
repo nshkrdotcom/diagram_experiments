@@ -1,0 +1,43 @@
+graph 
+    subgraph "Rat&nbsp;Brain&nbsp;Pleasure&nbsp;Circuit&nbsp;Interface"
+
+        subgraph Rat["Rat (In Vivo/Ex Vivo)"]
+            PleasureCircuits["Pleasure Circuits (MFB, NAc, VTA)"] --> BCI["Wireless BCI (Recording & Stimulation)"]
+            Stimulus["Pleasure Stimuli (Virtual Environment, Direct Stimulation)"] --> PleasureCircuits
+            
+        end
+        Rat --> BehaviorMonitor["Behavioral Monitoring (Movement, Vocalizations)"]
+    end
+
+    BCI --> NeuralData["Neural Activity Data"]
+
+    subgraph "AI&nbsp;System"
+        NeuralData --> Decoder["Real-time Neural Decoder (AI)"]
+        Decoder --> PleasureModel["Generative Pleasure Model (AI)"]
+    end
+
+    subgraph "Simulated&nbsp;Rat&nbsp;Brain"
+        PleasureModel --> SimulatedBCI["Simulated BCI (API compatible)"]
+        SimulatedBCI --> SimulatedBrain["Simulated Rat Brain (Pleasure Circuit Model)"]
+        
+       subgraph "Embodied&nbsp;Agent&nbsp;Control"
+            SimulatedBrain --> AgentActionsSim["Embodied Agent Actions (Simulated)"]
+            AgentActionsSim --> VirtualEnvironment["Virtual Environment"]
+       end
+    end
+
+    subgraph "Embodied&nbsp;Agent&nbsp;Control&nbsp;Bio"
+         BCI --> AgentActionsBio["Embodied Agent Actions Bio"]
+            AgentActionsBio --> VirtualEnvironment["Virtual Environment"]
+    end
+
+    VirtualEnvironment --> Stimulus
+    
+    AgentActionsBio & AgentActionsSim --> Comparator["Comparator (Behavior, Internal States)"]
+
+    style PleasureCircuits fill:#ccf,stroke:#888,stroke-width:2px
+    style BCI fill:#aaf,stroke:#666,stroke-width:2px
+    style Decoder fill:#aaf,stroke:#666,stroke-width:2px
+    style PleasureModel fill:#aaf,stroke:#666,stroke-width:2px
+    style SimulatedBCI fill:#aaf,stroke:#666,stroke-width:2px
+    style SimulatedBrain fill:#aaf,stroke:#666,stroke-width:2px
