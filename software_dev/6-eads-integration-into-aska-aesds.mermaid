@@ -1,0 +1,78 @@
+graph LR
+    subgraph AESDS
+        direction LR
+        subgraph "Decentralized AI Engine"
+            SecAI[Security AI] --> AI
+            PerfAI[Performance AI] --> AI
+            UsabAI[Usability AI] --> AI
+            MainAI[Maintainability AI] --> AI
+            STNAI["STN AI"] --> AI
+            DTGAI["DTG AI"] --> AI
+        end
+
+        AI[Aggregated AI Engine] --> GP[Genetic Programming Module]
+
+        KB[Knowledge Base] --> AI
+        Metrics[Performance Metrics] --> AI
+        UF[User Feedback] --> AI
+        TI[Threat Intel] --> AI
+        RS[Robustness Score] --> AI
+        FB[Feedback] --> AI & GP
+
+
+        GP --> Candidates[Candidate Solutions]
+
+
+
+        subgraph "Secure Software Repository & Deployment"
+            SSR["Secure Software Repository"] --> SD[Secure Deployment]
+            DLT[Decentralized Ledger] --> SSR & SD
+        end
+
+        SD --> IES[IES Instances]
+        SD --> Apps[User Applications]
+        IES --> Metrics
+        Apps --> UF
+        Candidates --> SSR
+    end
+
+    subgraph EADS
+        direction TB
+        Candidates --> SA[Static Analysis]
+        Candidates --> DA[Dynamic Analysis]
+        Candidates --> FV[Formal Verification]
+        Candidates --> DV[Diversity Assessment]
+        Candidates --> CE[Constraint Enforcement]
+
+
+        SA --> Robustness[Robustness Score & Feedback]
+        DA --> Robustness
+        FV --> Robustness
+        DV --> Robustness
+        CE --> Robustness
+
+        Robustness --> FB & RS  
+
+    end
+
+    subgraph ASKA
+      IES[IES Sandbox] --> DA
+      DTMS[DTMS] --> EADS & AESDS
+      HESE[HESE-DAR] --> EADS & AESDS
+      MCN[Multi-Channel Network] --> SD & EADS & AESDS
+    end
+
+
+
+
+    subgraph "Human-Machine Interface"
+       HMI[Interface] --> UF
+       HMI --> AI
+       HMI --> GP
+       Robustness --> HMI
+
+    end
+
+
+
+    AESDS -->|Evolved & Robust Solutions| ASKA["ASKA System"]
