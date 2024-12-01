@@ -1,0 +1,40 @@
+graph LR
+    subgraph "Genetic&nbsp;Programming&nbsp;Engine&nbsp;[DEAP/PyGAD]"
+        A[Chromosome Representation]
+        B[Initial Population Generation]
+        
+        subgraph "Variation Operators"
+            C[Mutation Strategies]
+            D[Crossover Mechanisms]
+            E[LLM-Guided Mutation]
+        end
+        
+        F[Fitness Evaluation Function]
+        G[Selection Strategies]
+        H[Population Management]
+    end
+
+    subgraph "Machine&nbsp;Learning&nbsp;Integration"
+        I[Code Language Models]
+        J[Semantic Code Understanding]
+        K[Generative Code Completion]
+    end
+
+    subgraph "Evaluation&nbsp;Metrics"
+        L[Complexity Analysis]
+        M[Performance Scoring]
+        N[Security Assessment]
+        O[Architectural Compliance]
+    end
+
+    A --> B
+    B --> C
+    B --> D
+    I --> E
+    C & D --> H
+    H --> F
+    J --> F
+    F --> G
+    G --> H
+    
+    L & M & N & O --> F
