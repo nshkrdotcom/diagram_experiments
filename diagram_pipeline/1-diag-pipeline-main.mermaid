@@ -1,0 +1,54 @@
+graph TD
+    %% Style for nodes
+    style A fill:#1f77b4,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style B fill:#ff7f0e,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style C fill:#2ca02c,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style D fill:#d62728,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style E fill:#9467bd,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style F fill:#8c564b,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style G fill:#e377c2,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style H fill:#7f7f7f,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style I fill:#17becf,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+
+    %% Subgraph styling
+    classDef enhancementLayer fill:#f0f0f0,stroke:#2ca02c,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef corePipeline fill:#f0f0f0,stroke:#1f77b4,stroke-width:2px,stroke-dasharray: 5 5;
+
+    %% Nodes
+    A[Input DSL] --> B[Parser]
+    B --> C[Semantic Analyzer]
+    C --> D[Layout Engine]
+    D --> E[Style Transformer]
+    E --> F[Rendering Engine]
+    
+    G[Style Library] --> E
+    H[LLM] --> |Enhance/Refine| C
+    H --> |Style Suggestions| E
+    I[Vector DB] --> |Similar Examples| E
+
+    %% Subgraphs
+    subgraph "Enhancement Layer"
+        class H,I enhancementLayer;
+        H
+        I
+    end
+
+    subgraph "Core Pipeline"
+        class A,B,C,D,E,F corePipeline;
+        A
+        B
+        C
+        D
+        E
+        F
+    end
+
+    %% Edge Styling
+    linkStyle 0 stroke:#ff7f0e,stroke-width:2px,stroke-dasharray: 5 5;
+    linkStyle 1 stroke:#2ca02c,stroke-width:2px;
+    linkStyle 2 stroke:#9467bd,stroke-width:2px;
+    linkStyle 3 stroke:#9467bd,stroke-width:2px;
+    linkStyle 4 stroke:#8c564b,stroke-width:2px;
+    linkStyle 5 stroke:#7f7f7f,stroke-width:2px;
+    linkStyle 6 stroke:#17becf,stroke-width:2px;
+
