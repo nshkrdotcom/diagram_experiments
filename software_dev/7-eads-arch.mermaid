@@ -1,0 +1,49 @@
+graph TD
+    subgraph "Knowledge&nbsp;Representation&nbsp;[Neo4j]"
+        A[Code Taxonomy Graph]
+        B[Architectural Constraints]
+        C[Dependency Relationships]
+        D[Evolutionary Lineage Tracking]
+    end
+
+    subgraph "Semantic&nbsp;Embedding&nbsp;[Pinecone]"
+        E[High-Dimensional Code Vectors]
+        F[Similarity Search Engine]
+        G[Contextual Retrieval]
+    end
+
+    subgraph "Metadata&nbsp;Management&nbsp;[Postgres]"
+        H[Experiment Tracking]
+        I[Version Control]
+        J[Performance Metrics]
+        K[Compliance Logs]
+    end
+
+    subgraph "Evolutionary&nbsp;Algorithm&nbsp;Core"
+        L[Genetic Representation Engine]
+        M[Mutation Operators]
+        N[Crossover Mechanisms]
+        O[Fitness Evaluation]
+        P[Selection Strategy]
+    end
+
+    subgraph "Feedback&nbsp;&&nbsp;Analysis"
+        Q[Static Code Analysis]
+        R[Runtime Performance Monitor]
+        S[Security Vulnerability Detection]
+    end
+
+    A & B & C --> L
+    E & F --> L
+    L --> M & N
+    M & N --> O
+    O --> P
+    P --> H
+    
+    Q & R & S --> O
+    L --> E
+    O --> K
+    P --> I
+    
+    G --> L
+    D --> L
