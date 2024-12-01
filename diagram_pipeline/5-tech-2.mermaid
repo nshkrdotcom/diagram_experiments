@@ -1,0 +1,47 @@
+graph TD
+    %% Frontend
+    subgraph "Frontend"
+        style A fill:#3498db,stroke:#2c3e50,stroke-width:2px
+        style B fill:#5dade2,stroke:#2c3e50,stroke-width:2px
+        style C fill:#aed6f1,stroke:#2c3e50,stroke-width:2px
+        A[Mermaid Code Editor] -->|Raw Code| B[Parser Component]
+        B -->|AST| C[Preview Renderer]
+    end
+
+    %% Backend Service
+    subgraph "Backend Service"
+        style D fill:#e67e22,stroke:#d35400,stroke-width:2px
+        style E fill:#f39c12,stroke:#d35400,stroke-width:2px
+        style F fill:#9b59b6,stroke:#8e44ad,stroke-width:2px
+        style G fill:#8e44ad,stroke:#5b2c6f,stroke-width:2px
+        D[FastAPI Server] -->|Parse| E[Mermaid Parser]
+        E -->|AST| F[GPT-4 Enhancement]
+        F -->|Enhanced AST| G[Layout Engine]
+
+        subgraph "Layout Pipeline"
+            style H fill:#27ae60,stroke:#1e8449,stroke-width:2px
+            style I fill:#2ecc71,stroke:#1e8449,stroke-width:2px
+            style J fill:#2980b9,stroke:#1f618d,stroke-width:2px
+            H[dagre] -->|Layout Config| I[Style Processor]
+            I -->|Styled Graph| J[SVG Generator]
+        end
+    end
+
+    %% Rendering Layer
+    subgraph "Rendering Layer"
+        style K fill:#16a085,stroke:#0e6655,stroke-width:2px
+        style L fill:#7f8c8d,stroke:#2c3e50,stroke-width:2px
+        style M fill:#34495e,stroke:#2c3e50,stroke-width:2px
+        K[React Component] -->|Render Request| L[D3.js Engine]
+        L -->|Final SVG| M[Export Handler]
+    end
+
+    %% Data Flow
+    B -->|Code| D
+    J -->|Enhanced SVG| K
+    M -->|Downloads| N[PNG/SVG/PDF]
+
+    %% Enhancement Flow
+    F -.->|Style Suggestions| I
+    F -.->|Layout Hints| G
+
