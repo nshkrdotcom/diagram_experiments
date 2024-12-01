@@ -1,0 +1,48 @@
+graph LR
+    subgraph EADS
+        direction LR
+        subgraph Knowledge
+            Neo4j["Knowledge Graph<br>(Neo4j)<br>- Code Taxonomy,<br>Architecture,<br>Lineage"]
+            Pinecone["Semantic Embeddings<br>(Pinecone)<br>- Code Vectors,<br>Similarity Search"]
+            NLP["NLP Enrichment"] --> Neo4j
+            Neo4j & Pinecone --> AI
+        end
+
+        subgraph "Genetic&nbsp;Programming"
+            DEAP["GP Engine (DEAP/PyGAD)<br>- Chromosomes, Operators,<br>Selection, Population Mgmt"]
+            AI["Decentralized AI Engine<br>(TensorFlow/PyTorch/Scikit-learn)<br>- Code Generation,<br>Analysis, Optimization"] --> DEAP
+            
+            HCI["Human-in-the-Loop Interface"] --> AI & DEAP
+
+        end
+
+        subgraph Robustness
+            direction TB
+            Static["Static Analysis<br>(PMD, FindBugs, cppcheck, Flake8)"] --> REM
+            Dynamic["Dynamic Analysis<br>(DynamoRIO, Frida)"] --> REM
+            Formal["Formal Verification<br>(CBMC, KLEE)"] --> REM
+            Pinecone --> REM
+            REM["Robustness Enhancement<br>Module (Scikit-learn,<br>LLM Integration)"] --> DEAP & AI
+
+        end
+
+
+        subgraph Deployment
+            Airflow["Workflow Orchestration<br>(Apache Airflow)"] --> Docker["Containerization<br>(Docker)"]
+            Docker --> Kubernetes["Orchestration<br>(Kubernetes)"]
+        end
+
+        subgraph Monitoring
+           MD["Metadata Database<br>(Postgres)<br>- Experiment Tracking,<br> Metrics, Logs"]
+           MD --> DEAP & AI & REM & HCI
+        end
+
+         DEAP --> Deployment
+        
+
+
+    end
+    Knowledge --> DEAP
+    Robustness --> DEAP
+    Monitoring --> Airflow
+    Deployment --> Monitoring &  EADS["EADS Output"]
