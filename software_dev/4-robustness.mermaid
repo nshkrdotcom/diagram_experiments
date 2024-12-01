@@ -1,0 +1,33 @@
+graph LR
+    subgraph "Robustness Enhancement Module"
+        A[Candidate Code] --> B[Static Analysis]
+        B --> C[Code Smell Detection]
+        B --> D[Bug Prediction]
+        B --> E[Security Vulnerability<br>Scanning]
+
+        A --> F["Dynamic Analysis<br>(Runtime Monitoring)"]
+        F --> G["Exception Analysis"]
+        F --> H["Performance<br>Measurement"]
+        T[Test Results] --> F
+
+        A --> I[Constraint Validation]
+
+        C --> J[Refactoring Suggestions]
+        D --> K[Bug Fix Suggestions]
+        E --> L[Security Hardening<br>Suggestions]
+        I --> M[Constraint Violation<br>Report]
+
+        J & K & L & M --> N[Feedback to Code<br>Generation & Modification]
+        
+        C & D & E & G & H & I --> O[Robustness Score]
+        O --> AA[Analysis Reports]
+    end
+
+    O --> P["Fitness<br>Evaluation (GP Engine)"]
+    N --> Q[Code Generation &<br>Modification Module]
+    U["Problem Definition &<br>Specification Module"] --> I
+    V[Code Generation &<br>Modification Module] --> A
+    W[Testing & Evaluation<br>Module] --> T
+    Z["Monitoring & Analysis<br>Module"]
+
+    AA --> Z

@@ -1,0 +1,30 @@
+graph 
+    subgraph "Code Generation & Modification Module"
+        A[Problem Description] --> B{LLM Prompt Engineering}
+        R[Robustness Feedback] --> B
+        P[Parent Code] --> I["Code Modification <br> (Mutation/Crossover)"]
+        W["Augmented Information (RAG)"] --> B
+        B --> C[LLM Code Generation]
+        A --> T[Template/Rule-based<br>Code Generation]
+        C --> D[Response Parsing & Validation]
+        I --> D
+        T --> D
+        D --> E[Code Transformation]
+        F[Formatting & Normalization] --> E
+        G[Refactoring] --> E
+        O[Optimization] --> E
+        E --> H[Modified Code]
+        subgraph "LLM Feedback Loop"
+            C --> J[LLM Code Review]
+            J --> G
+        end
+    end
+    A --> T
+    H --> K["To GP Engine<br>(Initialization/Variation)"]
+    H --> L[To Testing &<br>Evaluation Module]
+    H --> M[To Robustness<br>Enhancement Module]
+    U["Problem Definition &<br>Specification Module"] --> A
+    X["Robustness Enhancement<br>Module"] --> R
+    GP["GP Engine"] --> P
+    Y["Retrieval Augmented<br>Generation (RAG) Module"] --> W
+    K --> GP
