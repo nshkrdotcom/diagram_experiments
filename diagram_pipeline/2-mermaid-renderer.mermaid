@@ -1,43 +1,73 @@
 graph TB
+    %% Style for nodes
+    style A fill:#1f77b4,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style B fill:#ff7f0e,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style C fill:#2ca02c,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style D fill:#d62728,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style E fill:#9467bd,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style F fill:#8c564b,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style G fill:#e377c2,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style H1 fill:#ff9999,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style H2 fill:#ffcc99,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style H3 fill:#99ff99,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style LLM fill:#f9f,stroke:#333,stroke-width:2px,rx:8px,ry:8px
+    style D4 fill:#ff7f0e,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style E4 fill:#2ca02c,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style E1 fill:#9467bd,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style E2 fill:#8c564b,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style E3 fill:#7f7f7f,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style D1 fill:#17becf,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style D2 fill:#ff9999,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+    style D3 fill:#99ff99,stroke:#ffffff,stroke-width:2px,rx:8px,ry:8px
+
+    %% Subgraph styling
+    classDef input fill:#f0f0f0,stroke:#1f77b4,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef enhancement fill:#f0f0f0,stroke:#2ca02c,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef output fill:#f0f0f0,stroke:#9467bd,stroke-width:2px,stroke-dasharray: 5 5;
+
+    %% Nodes
     subgraph Input
-        A[Mermaid Code] --> B[Parser]
-        B --> C[AST Generator]
+        class A,B,C input;
+        A[Mermaid<br>Code] --> B[Parser]
+        B --> C[AST<br>Generator]
     end
 
     subgraph Enhancement
-        C --> D[Layout Optimizer]
-        D --> E[Style Engine]
+        class C,D,E enhancement;
+        C --> D[Layout<br>Optimizer]
+        D --> E[Style<br>Engine]
         
-        subgraph "Layout Optimization"
-            D --> D1[Node Spacing Analysis]
-            D --> D2[Edge Routing]
-            D --> D3[Hierarchical Balancing]
+        subgraph "Layout&nbsp;Optimization"
+            class D1,D2,D3,D4 enhancement;
+            D --> D1[Node<br>Spacing<br>Analysis]
+            D --> D2[Edge<br>Routing]
+            D --> D3[Hierarchical<br>Balancing]
             
-            D1 & D2 & D3 --> D4[Optimized Layout]
+            D1 & D2 & D3 --> D4[Optimized<br>Layout]
         end
         
-        subgraph "Style Processing"
-            E --> E1[Color Scheme Generator]
-            E --> E2[Typography Handler]
-            E --> E3[Shape/Line Styler]
+        subgraph "Style&nbsp;Processing"
+            class E1,E2,E3,E4 enhancement;
+            E --> E1[Color<br>Scheme<br>Generator]
+            E --> E2[Typography<br>Handler]
+            E --> E3[Shape/Line<br>Styler]
             
-            LLM[LLM Style Advisor] --> |Style Suggestions| E1
-            LLM --> |Font Pairing| E2
-            LLM --> |Visual Hierarchy| E3
+            LLM[LLM<br>Style<br>Advisor] --> |Style<br>Suggestions| E1
+            LLM --> |Font<br>Pairing| E2
+            LLM --> |Visual<br>Hierarchy| E3
             
-            E1 & E2 & E3 --> E4[Unified Style]
+            E1 & E2 & E3 --> E4[Unified<br>Style]
         end
     end
 
     subgraph Output
-        D4 --> F[SVG Generator]
+        class D4,E4,F,G output;
+        D4 --> F[SVG<br>Generator]
         E4 --> F
-        F --> G[Final SVG]
+        F --> G[Final<br>SVG]
         
-        G --> H1[Academic Format]
-        G --> H2[Web Optimized]
-        G --> H3[High-res Export]
+        G --> H1[Academic<br>Format]
+        G --> H2[Web<br>Optimized]
+        G --> H3[High-res<br>Export]
     end
 
-    style LLM fill:#f9f,stroke:#333,stroke-width:2px
-    style G fill:#9f9,stroke:#333,stroke-width:2px
