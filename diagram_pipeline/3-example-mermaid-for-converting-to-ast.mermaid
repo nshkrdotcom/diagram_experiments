@@ -1,0 +1,12 @@
+graph TD
+    A[Input DSL] --> B[Parser]
+    B --> C[Semantic Analyzer]
+    C --> D[Layout Engine]
+    D --> E[Style Transformer]
+    E --> F[Rendering Engine]
+    
+    G[Style Library] --> E
+    H[LLM] --> |Enhance/Refine| C
+    H --> |Style Suggestions| E
+    I[Vector DB] --> |Similar Examples| E
+

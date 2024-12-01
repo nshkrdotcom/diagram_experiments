@@ -1,0 +1,18 @@
+Root
+│
+├── Input DSL
+│   └── Parser
+│       └── Semantic Analyzer
+│           └── Layout Engine
+│               └── Style Transformer
+│                   └── Rendering Engine
+│
+├── Style Library
+│
+├── LLM
+│   ├── Enhance/Refine (Semantic Analyzer)
+│   └── Style Suggestions (Style Transformer)
+│
+└── Vector DB
+    └── Similar Examples (Style Transformer)
+
