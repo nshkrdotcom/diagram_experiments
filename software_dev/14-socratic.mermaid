@@ -1,0 +1,34 @@
+graph LR
+    subgraph MetaGameDynamics["Meta Game Dynamics"]
+
+        subgraph GameScheduler["Game Scheduler"]
+            SchedulingLogic["Scheduling<br>Logic"]
+            SelectedGame["Selected<br>Game"]
+            style SchedulingLogic fill:#d8bfd8,stroke:#da70d6
+            style SelectedGame fill:#e0ffff,stroke:#87ceeb
+        end
+
+        subgraph MetaCritic["Meta Critic"]
+            EvaluationMetrics["Evaluation<br>Metrics (e.g.,<br>Learning<br>Progress,<br>Diversity)"]
+            GameEvaluations["Game<br>Evaluations"]
+            style EvaluationMetrics fill:#add8e6,stroke:#00bfff
+            style GameEvaluations fill:#ffa500,stroke:#b70
+        end
+        
+        subgraph GameLibrary["Language Game Library"]
+            Game1["Game 1"]
+            Game2["Game 2"]
+            Game3["Game 3"]
+            style Game1 fill:#fffacd,stroke:#daa520
+            style Game2 fill:#fffacd,stroke:#daa520
+            style Game3 fill:#fffacd,stroke:#daa520
+        end
+
+        EvaluationMetrics --> GameEvaluations
+        GameEvaluations --> SchedulingLogic
+        GameLibrary ----> SchedulingLogic
+        SchedulingLogic --> SelectedGame
+
+
+
+    end

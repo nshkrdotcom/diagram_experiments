@@ -1,0 +1,44 @@
+graph LR
+    subgraph LanguageGame["Language&nbsp;Game&nbsp;Example"]
+        subgraph Agent1["Agent 1"]
+            LLM1["LLM(Core)"]
+            style LLM1 fill:#f0f0f0,stroke:#333,stroke-width:2px
+        end
+        subgraph Agent2["Agent&nbsp;2"]
+            LLM2["LLM(Core)"]
+            style LLM2 fill:#f0f0f0,stroke:#333,stroke-width:2px
+        end
+
+        subgraph GameMechanics["Game&nbsp;Mechanics"]
+            Rules["Game<br>Rules"]
+            ScoringFunction["Scoring<br>Function"]
+            style Rules fill:#e0ffff,stroke:#87ceeb
+            style ScoringFunction fill:#c0d6e4,stroke:#4682b4
+        end
+
+        subgraph Evaluator["Game#8209;Specific&nbsp;Evaluator"]
+            EvaluationProcess["Evaluation<br>Process"]
+            ScoreOutput["Score Output"] --> GameScheduler
+            style EvaluationProcess fill:#c0d6e4,stroke:#4682b4
+            style ScoreOutput fill:#ffa500,stroke:#b70
+        end
+
+
+        Agent1 --> Rules
+        Agent2 --> Rules
+        Agent1 --> ScoringFunction
+        Agent2 --> ScoringFunction
+        Agent1 --> EvaluationProcess
+        Agent2 --> EvaluationProcess
+        GameMechanics --> EvaluationProcess
+        
+
+        style Agent1 fill:#a0e0a0,stroke:#080
+        style Agent2 fill:#a0e0a0,stroke:#080
+
+
+    end
+
+    subgraph GameScheduler["Game&nbsp;Scheduler"]
+        style GameScheduler fill:#d8bfd8,stroke:#da70d6
+    end

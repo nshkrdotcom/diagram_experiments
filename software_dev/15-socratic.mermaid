@@ -1,0 +1,37 @@
+graph LR
+    subgraph AgentLearning["Agent&nbsp;Learning&nbsp;Process"]
+
+        subgraph Agent["Agent"]
+            LLM["LLM<br>(Core)"]
+            LearnedElements["Learned<br>Elements"]
+            style LLM fill:#f0f0f0,stroke:#333,stroke-width:2px
+            style LearnedElements fill:#a0e0a0,stroke:#080
+        end
+
+        subgraph Game["Game&nbsp;Interaction"]
+            AgentActions["Agent<br>Actions<br>(Outputs)"]
+            GameEnvironment["Game<br>Environment"]
+            style AgentActions fill:#ccf,stroke:#00f
+            style GameEnvironment fill:#e0ffff,stroke:#87ceeb
+        end
+
+        subgraph Evaluator["Evaluator"]
+            Score["Score/Feedback"]
+            style Score fill:#ffa500,stroke:#b70
+        end
+        
+        subgraph LearningAlgorithm["Learning&nbsp;Algo"]
+            UpdateRule["Update<br>Rule"]
+            style UpdateRule fill:#f00080,stroke:#40f
+        end
+        LLM --> AgentActions
+        AgentActions --> GameEnvironment
+        GameEnvironment --> Evaluator
+        Evaluator --> Score
+        Score --> LearningAlgorithm
+        LearningAlgorithm --> UpdateRule
+        UpdateRule --> LearnedElements
+        LearnedElements --> LLM
+
+
+    end

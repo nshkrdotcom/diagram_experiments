@@ -1,0 +1,46 @@
+graph LR
+    subgraph SocraticLearning["Socratic&nbsp;Learning&nbsp;System"]
+
+        subgraph Agent["Agent"]
+            LLM["LLM"]
+            Learning["Learning<br>Process"]
+            style LLM fill:#f0f0f0,stroke:#333,stroke-width:2px
+            style Learning fill:#a0e0a0,stroke:#080
+        end
+
+        subgraph Games["Games&nbsp;&&nbsp;Evaluation"]
+            GameLibrary["Game<br>Library"]
+            GameScheduler["Game<br>Scheduler"]
+            Evaluator["Evaluator"]
+            style GameLibrary fill:#fffacd,stroke:#daa520
+            style GameScheduler fill:#d8bfd8,stroke:#da70d6
+            style Evaluator fill:#c0d6e4,stroke:#4682b4
+
+        end
+
+        subgraph Meta["Meta#8209;Game"]
+            MetaCritic["Meta-Critic"]
+            style MetaCritic fill:#add8e6,stroke:#00bfff
+        end
+
+        Agent --> Games
+        Games --> Learning
+        Learning --> Agent
+        MetaCritic --> GameScheduler
+        GameScheduler --> GameLibrary
+
+
+    end
+
+    Observer["Observer"]
+    Performance["Performance<br>Metric"] --> Observer
+    style Observer fill:#FFD700,stroke:#DAA520
+    style Performance fill:#FAFAD2,stroke:#D2B48C
+
+
+    Observer --> SocraticLearning
+
+
+
+    Bootstrapping["Bootstrapping"] --> Agent
+     style Bootstrapping fill:#90ee90,stroke:#228b22
