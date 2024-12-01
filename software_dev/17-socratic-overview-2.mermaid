@@ -1,0 +1,69 @@
+graph LR
+    subgraph SocraticLearning["Socraticnbsp;Learning&nbsp;System"]
+
+        subgraph Agent["Agent"]
+            LLM["LLM<br>(Core)"]
+            LearnedElements["Learned<br>Elements"] --> LLM
+            TransientElements["Transient<br>Elements"] --> LLM
+            Memory["Memory<br>Management"] --> LLM
+            Introspection["Introspection<br>Module"] --> LLM
+            LearningAlgorithms["Learning<br>Algorithms"] --> LearnedElements
+            style LLM fill:#f0f0f0,stroke:#333,stroke-width:2px
+            style LearnedElements fill:#a0e0a0,stroke:#080
+            style TransientElements fill:#ccf,stroke:#00f
+            style Memory fill:#ffa500,stroke:#b70
+            style Introspection fill:#800080,stroke:#40f
+            style LearningAlgorithms fill:#da70d6,stroke:#8a2be2
+        end
+
+        subgraph GamesAndEvaluation["Gamesnbsp;&nbsp;Evaluation"]
+            GameLibrary["Language<br>Game<br>Library"]
+            GameScheduler["Game<br>Scheduler"] --> GameLibrary
+            GameGenerator["Game<br>Generator"] --> GameLibrary
+            GameDescriptions["Game<br>Description<br>Generator"] --> GameLibrary
+            
+            GameInstance["Game<br>Instance"]
+            GameRules["Game<br>Rules"] --> GameInstance
+            AgentActions["Agent<br>Actions"] --> GameInstance
+            Evaluator["Game-Specific<br>Evaluator"] --> GameInstance
+            Score["Score/Feedback"] --> LearningAlgorithms
+            
+            style GameLibrary fill:#fffacd,stroke:#daa520
+            style GameScheduler fill:#d8bfd8,stroke:#da70d6
+            style GameGenerator fill:#e0ffff,stroke:#87ceeb
+            style GameDescriptions fill:#e6e6fa,stroke:#9370db
+            style GameInstance fill:#ffe4c4,stroke:#f08080
+            style GameRules fill:#b0e0e6,stroke:#add8e6
+            style AgentActions fill:#afeeee,stroke:#5f9ea0
+            style Evaluator fill:#c0d6e4,stroke:#4682b4
+            style Score fill:#ffa500,stroke:#b70
+        end
+
+        subgraph Meta["Meta#8209;Game"]
+            MetaCritic["Meta-Critic"] --> GameScheduler
+            EvaluationMetrics["Evaluation<br>Metrics"] --> MetaCritic
+            style MetaCritic fill:#add8e6,stroke:#00bfff
+            style EvaluationMetrics fill:#d8bfd8,stroke:#da70d6
+        end
+
+        Agent --> GameInstance
+        GameInstance --> Score
+        
+
+    end
+
+    Observer["Observer"]
+    Performance["Performance<br>Metric"] --> Observer
+    EvaluationMechanism["Evaluation<br>Mechanism"] --> Observer --> SocraticLearning
+    style Observer fill:#FFD700,stroke:#DAA520
+    style Performance fill:#FAFAD2,stroke:#D2B48C
+    style EvaluationMechanism fill:#f5f5dc,stroke:#bdb76b
+
+    Bootstrapping["Bootstrapping<br>Process"] --> Agent
+    InitialData["Initial<br>Data"] --> Bootstrapping
+    KnowledgeBase["Knowledge<br>Base"] --> Agent
+    DataAugmenter["Data<br>Augmenter"] --> KnowledgeBase ----> GamesAndEvaluation
+     style Bootstrapping fill:#90ee90,stroke:#228b22
+     style InitialData fill:#98fb98,stroke:#3cb371
+     style KnowledgeBase fill:#f0e68c,stroke:#daa520
+     style DataAugmenter fill:#bdb76b,stroke:#8b4513
