@@ -1,0 +1,29 @@
+graph TD
+    %% Frontend
+    A[Mermaid.js - Diagram Rendering] --> B[D3.js / Cytoscape.js - Interactive Graph Rendering]
+
+    %% Backend
+    C["Backend (Flask/Django/Node.js)"]
+    B --> C
+
+    %% Processing
+    D[Mermaid.js Parser]
+    E[LLM API - LLM Enhancement]
+    F["Graph Analysis & Suggestions (NetworkX/Cytoscape.js)"]
+
+    C --> D
+    D --> E
+    E --> F
+    F --> G["Graph Layout & Optimization (Cytoscape.js/D3.js/Graphviz)"]
+
+    %% Rendering
+    G --> H["Final Diagram Rendering (Mermaid.js)"]
+    G --> I["Custom Visualization (D3.js)"]
+
+    %% Data Flow
+    A --> C
+    B --> G
+    E --> H
+    F --> I
+    G --> H
+
