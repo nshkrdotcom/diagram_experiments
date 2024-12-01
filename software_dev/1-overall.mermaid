@@ -1,0 +1,69 @@
+graph LR
+    subgraph "Problem Definition & Specification Module"
+        A[Define Goals & Requirements] --> B[Specify Metrics & Constraints]
+    end
+    
+    subgraph "Genetic Programming (GP) Engine"
+        C[Population Management]
+        D[Initialization] --> C
+        E[Variation Operators] --> C
+        F[Fitness Evaluation] --> C
+        G[Selection] --> C
+    end
+
+    subgraph "Code Generation & Modification Module"
+        H[LLM-Assisted Generation]
+        I[Code Synthesis]
+        J[Code Transformation]
+    end
+
+    subgraph "Testing & Evaluation Module"
+        K[Unit Testing]
+        L[Integration Testing]
+        M[Performance Testing]
+        N[Security Testing]
+        O["User Feedback (Optional)"]
+    end
+    
+    subgraph "Robustness Enhancement Module"
+        P[Diversity Promotion]
+        Q[Code Review & Static Analysis]
+        R["Formal Verification (Optional)"]
+        S[Runtime Monitoring]
+        T[Constraint Enforcement]
+    end
+
+    subgraph "Retrieval Augmented Generation (RAG) Module"
+        U[Knowledge Base]
+        V[Retrieval] --> W[Augmented Generation]
+        U --> V
+    end
+
+    subgraph "Version Control & Deployment Module"
+        X[Version Control]
+        Y[Deployment]
+    end
+
+    subgraph "Monitoring & Analysis Module"
+        Z[Data Collection] --> AA[Visualization & Analysis]
+    end
+
+
+    B --> D
+    C --> H & I & J
+    H & I & J --> E
+    E --> F
+    F --> G
+    F --> S
+    G --> X
+
+
+    C --> P & Q & R & T  
+    P & Q & R & T --> E
+    W --> H & E
+    G --> Y
+    K & L & M & N & O --> F
+    B --> T
+
+
+    C --> Z
