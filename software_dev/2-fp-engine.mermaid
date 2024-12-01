@@ -1,0 +1,44 @@
+graph
+    subgraph GP Engine
+        subgraph Population
+            A["Representation (AST, LGP, String)"]
+        end
+        
+        B[Initialization] --> A
+        C[Problem Description] --> B
+        D[LLM-Assisted<br>Generation] --> B
+        E[Seed with<br>Examples] --> B
+
+        A --> F[Variation Operators]
+        G[Mutation] --> F
+        H[Crossover] --> F
+        I[LLM-Guided<br>Mutation/Crossover] --> F
+        J[Robustness<br>Feedback] --> F
+
+        F --> K[Fitness Evaluation]
+        L[Testing & Evaluation<br>Module Output] --> K
+        M[Robustness<br>Score] --> K
+        N[Constraints] --> K
+
+        K --> O[Adjusted Fitness]
+
+        O --> P[Selection]
+        Q[Tournament<br>Selection] --> P
+        R[Roulette Wheel<br>Selection] --> P
+        S[Rank-Based<br>Selection] --> P
+
+        P --> T[Next Generation<br>Population]
+        T --> A
+
+    end
+
+    U[Problem Definition &<br>Specification Module] --> C & N
+    V[Code Generation &<br>Modification Module] --> D & I
+    W[Testing & Evaluation<br>Module] --> L
+    X[Robustness Enhancement<br>Module] --> M & J
+    Y["Retrieval Augmented<br>Generation (RAG) Module"] --> D & I
+    Z[Version Control &<br>Deployment Module]
+    AA[Monitoring & Analysis<br>Module]
+
+    T --> Z
+    T --> AA
