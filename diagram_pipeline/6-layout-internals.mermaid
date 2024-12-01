@@ -1,0 +1,42 @@
+graph TD
+    subgraph "Parser Layer"
+        A[Mermaid Parser] -->|Raw AST| B[Graph Constructor]
+        B -->|Graph Structure| C[Analysis Engine]
+    end
+
+    subgraph "Analysis Engine"
+        C -->|Graph Metrics| D[Structural Analyzer]
+        C -->|Semantic Data| E[LLM Analyzer]
+        
+        D -->|Metrics| F[Layout Coordinator]
+        E -->|Enhanced Properties| F
+        
+        D -->|Graph Properties| D1[Centrality Analysis]
+        D -->|Hierarchy| D2[Clustering Detection]
+        D -->|Flow Analysis| D3[Edge Pattern Detection]
+        
+        E -->|Semantic Weight| E1[Node Importance]
+        E -->|Relationship Type| E2[Edge Classification]
+        E -->|Visual Hints| E3[Style Suggestions]
+    end
+
+    subgraph "Layout Engine"
+        F -->|Layout Config| G[Force Director]
+        G -->|Initial Layout| H[Hierarchical Optimizer]
+        H -->|Optimized Layout| I[Edge Router]
+        
+        J[Constraint Solver] -->|Spacing Rules| H
+        J -->|Crossing Rules| I
+        
+        K[Style Engine] -->|Visual Rules| L[Final Renderer]
+        I -->|Routed Graph| L
+    end
+    
+    subgraph "LLM Enhancement"
+        M[GPT-4 Service] -->|Layout Hints| F
+        M -->|Style Guide| K
+        M -->|Semantic Analysis| E
+    end
+
+    style M fill:#f9f,stroke:#333,stroke-width:2px
+    style L fill:#9f9,stroke:#333,stroke-width:2px
