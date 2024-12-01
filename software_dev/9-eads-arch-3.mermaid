@@ -1,0 +1,45 @@
+graph LR
+    subgraph EADS
+        direction LR
+        subgraph Knowledge
+            KG["Knowledge Graph (Neo4j)"]
+            SE["Semantic Embeddings (Pinecone)"]
+            NLP[NLP Enrichment] --> KG
+        end
+
+        subgraph "Genetic&nbsp;Programming"
+            IG[Initial Generation] --> PM[Population Management]
+            VO[Variation Operators] --> PM
+            FE[Fitness Evaluation] --> PM
+            SS[Selection Strategy] --> PM
+            KG & SE --> IG & VO & FE
+            FB[Feedback] --> VO & AI
+            HCI["Human-in-the-Loop"] --> PM & VO & FE & AI
+            AI["Decentralized AI Engine"] --> CG[Code Generator]
+            CG --> VO
+            RM[Robustness Metrics] --> FE & AI
+            
+        end
+
+        subgraph Robustness
+            direction TB
+            SA[Static Analysis] --> RE[Robustness Evaluation]
+            DA[Dynamic Analysis] --> RE
+            FV[Formal Verification] --> RE
+            DV[Diversity Assessment] --> RE
+            CE[Constraint Enforcement] --> RE
+            RE --> RM & FB
+            SE --> DV
+        end
+        subgraph "Deployment&nbsp;&&nbsp;Monitoring"
+           DM[Deployment & Monitoring]
+           MD["Metadata (Postgres)"] --> DM
+           DLT[Decentralized Ledger] --> DM
+           DM --> Metrics[Metrics]
+           Metrics --> FE & AI
+        end
+
+
+    end
+    Knowledge --> AI
+    
