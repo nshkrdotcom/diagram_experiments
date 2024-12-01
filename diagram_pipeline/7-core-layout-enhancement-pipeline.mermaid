@@ -1,0 +1,20 @@
+graph TD
+    subgraph "Parse Layer"
+        A[Mermaid Code] -->|mermaid.js| B[DAG]
+        B -->|AST Parser| C[Python AST]
+    end
+
+    subgraph "Layout Engine"
+        C -->|Init| D[Cytoscape Graph]
+        D -->|Force Layout| E[Initial Layout]
+        
+        subgraph "Enhancement Loop"
+            E -->|Analysis| F[LLM Suggestions]
+            F -->|Layout Params| G[Force Layout Config]
+            G -->|Adjust| D
+        end
+    end
+
+    subgraph "Output"
+        G -->|Final Layout| H[Enhanced Graph]
+    end
