@@ -1,4 +1,4 @@
-graph
+graph TD
     subgraph GP Engine
         subgraph Population
             A["Representation (AST, LGP, String)"]
@@ -29,7 +29,6 @@ graph
 
         P --> T[Next Generation<br>Population]
         T --> A
-
     end
 
     U[Problem Definition &<br>Specification Module] --> C & N
