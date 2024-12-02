@@ -24,6 +24,9 @@
     * [MLflow Tutorial](https://mlflow.org/docs/latest/llms/transformers/tutorials/fine-tuning/transformers-peft.html)
     * [Hugging Face Kermitt2](https://huggingface.co/kermitt2)
 
+  **Misc LLM Tools:**
+    * [LiteLLM](https://github.com/BerriAI/litellm)
+
 
 **II. Reinforcement Learning (RL):**
 
