@@ -1,6 +1,5 @@
 graph LR
     subgraph SocraticLearning["Socratic&nbsp;Learning&nbsp;System"]
-
         subgraph Agent["Agent"]
             LLM["LLM<br>(Core)"]
             LearnedElements["Learned<br>Elements"] --> LLM
@@ -21,13 +20,13 @@ graph LR
             GameScheduler["Game<br>Scheduler"] --> GameLibrary
             GameGenerator["Game<br>Generator"] --> GameLibrary
             GameDescriptions["Game<br>Description<br>Generator"] --> GameLibrary
-            
+
             GameInstance["Game<br>Instance"]
             GameRules["Game<br>Rules"] --> GameInstance
             AgentActions["Agent<br>Actions"] --> GameInstance
             Evaluator["Game-Specific<br>Evaluator"] --> GameInstance
             Score["Score/Feedback"] --> LearningAlgorithms
-            
+
             style GameLibrary fill:#fffacd,stroke:#daa520
             style GameScheduler fill:#d8bfd8,stroke:#da70d6
             style GameGenerator fill:#e0ffff,stroke:#87ceeb
@@ -48,8 +47,6 @@ graph LR
 
         Agent --> GameInstance
         GameInstance --> Score
-        
-
     end
 
     Observer["Observer"]
@@ -63,7 +60,8 @@ graph LR
     InitialData["Initial<br>Data"] --> Bootstrapping
     KnowledgeBase["Knowledge<br>Base"] --> Agent
     DataAugmenter["Data<br>Augmenter"] --> KnowledgeBase ----> GamesAndEvaluation
-     style Bootstrapping fill:#90ee90,stroke:#228b22
-     style InitialData fill:#98fb98,stroke:#3cb371
-     style KnowledgeBase fill:#f0e68c,stroke:#daa520
-     style DataAugmenter fill:#bdb76b,stroke:#8b4513
+
+    style Bootstrapping fill:#90ee90,stroke:#228b22
+    style InitialData fill:#98fb98,stroke:#3cb371
+    style KnowledgeBase fill:#f0e68c,stroke:#daa520
+    style DataAugmenter fill:#bdb76b,stroke:#8b4513
