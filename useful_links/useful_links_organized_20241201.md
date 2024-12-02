@@ -96,16 +96,81 @@
 
 **VIII. Miscellaneous:**
 
-* [Cognosis.ai](https://cognosis.ai/)
-* [CrewAI](https://github.com/crewAIInc/crewAI) (Corrected link)
-* [AI Conferences](https://datacamp.com/blog/top-ai-conferences)
-* [CasaOS](https://github.com/IceWhaleTech/CasaOS)
-* [PufferLib](https://github.com/PufferAI/PufferLib)
-* [CNN Guide](https://medium.com/thedeephub/convolutional-neural-networks-a-comprehensive-guide-5cc0b5eae175)
-* [RapidAPI](https://rapidapi.com/) (listed twice)
-* [Simon Willison's Blog](https://simonwillison.net/)
-* [Vercel Project](https://vercel.com/new?teamSlug=gtcodes-projects)
-* [v0.dev Pricing](https://v0.dev/pricing)
-* [AI News](https://www.artificialintelligence-news.com/)
-* [Boundless Socratic Learning with Language Games](https://arxiv.org/pdf/2411.16905)
-* [Papers with Code](https://paperswithcode.com/)
+* **Misc:**
+	* [Cognosis.ai](https://cognosis.ai/)
+	* [CrewAI](https://github.com/crewAIInc/crewAI) (Corrected link)
+	* [AI Conferences](https://datacamp.com/blog/top-ai-conferences)
+	* [CasaOS](https://github.com/IceWhaleTech/CasaOS)
+	* [PufferLib](https://github.com/PufferAI/PufferLib)
+	* [CNN Guide](https://medium.com/thedeephub/convolutional-neural-networks-a-comprehensive-guide-5cc0b5eae175)
+	* [RapidAPI](https://rapidapi.com/) (listed twice)
+	* [Simon Willison's Blog](https://simonwillison.net/)
+	* [Vercel Project](https://vercel.com/new?teamSlug=gtcodes-projects)
+	* [v0.dev Pricing](https://v0.dev/pricing)
+	* [AI News](https://www.artificialintelligence-news.com/)
+	* [Boundless Socratic Learning with Language Games](https://arxiv.org/pdf/2411.16905)
+	* [Papers with Code](https://paperswithcode.com/)
+
+* **Markdown:**
+    * [Markdown-it](https://github.com/markdown-it/markdown-it): A fast and highly extensible JavaScript Markdown parser.
+    * [SimpleMDE Markdown Editor](https://github.com/italia/simplemde-markdown-editor): A simple, embeddable JavaScript Markdown editor.
+
+* **LaTeX:**
+    * [KaTeX](https://github.com/KaTeX/KaTeX): A fast, easy-to-use JavaScript library for TeX math rendering on the web.
+    * [MathJax](https://github.com/mathjax/MathJax): A beautiful and accessible JavaScript display engine for mathematics that works in all browsers.
+
+* **DOM Manipulation:**
+    * [jQuery](https://github.com/jquery/jquery): A fast, small, and feature-rich JavaScript library that makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler.
+    * [Cheerio](https://github.com/cheeriojs/cheerio):  Fast, flexible, and lean implementation of core jQuery designed specifically for the server.
+
+* **Natural Language Processing (NLP):**
+    * [spaCy](https://github.com/explosion/spaCy): Industrial-strength Natural Language Processing (NLP) in Python.
+    * [Transformers](https://github.com/huggingface/transformers): State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch.
+
+* **Retrieval-Augmented Generation (RAG):**
+    * [FiD](https://github.com/facebookresearch/FiD): Facebook's implementation of Fusion-in-Decoder, a retrieval-augmented generation model.
+    * [OpenAI Cookbook](https://github.com/openai/openai-cookbook): Examples and guides for using the OpenAI API.
+
+* **Software Development Pipelines:**
+    * [Actions/Setup-Node](https://github.com/actions/setup-node): Set up a Node.js environment for use in GitHub Actions.
+    * [GH Action Auto Merge](https://github.com/EddieHubCommunity/gh-action-auto-merge): Automatically merge pull requests in GitHub Actions.
+
+* **Transformer-based Language Models:**
+    * [Hugging Face Transformers](https://huggingface.co/transformers/):  A library providing access to a vast collection of pre-trained transformer models.
+    * [AllenNLP](https://allennlp.org/): An open-source NLP research library, built on PyTorch.
+    * [PyTorch Lightning](https://www.pytorchlightning.ai/):  The lightweight PyTorch wrapper for high-performance AI research.
+
+* **RAG Frameworks:**
+    * [Haystack](https://haystack.deepset.ai/): An open-source framework for building search systems that use Retrieval Augmented Generation (RAG).
+    * [Semantic Kernel](https://github.com/microsoft/semantic-kernel):  An SDK and platform to mix conventional programming languages with the power of Large Language Models (LLMs).
+    * [Ray](https://www.ray.io/): A fast and simple framework for building and running distributed applications.
+
+* **Multi-Modal Representation Learning:**
+    * [VisualBERT](https://github.com/uclanlp/visualbert): A simple and performant baseline for vision and language.
+    * [CLIP](https://github.com/openai/CLIP): Contrastive Language–Image Pre-training.
+    * [VilBERT](https://github.com/jiasenlu/vilbert_multi_task): Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks.
+
+* **Continual and Lifelong Learning:**
+    * [Avalanche](https://avalanche-api.embryo.continualai.org/en/latest/):  A library for continual learning research.
+    * [Continual Learning in PyTorch](https://github.com/GMvandeVen/continual-learning): PyTorch implementation of various continual learning algorithms.
+    * [Meta-Learning in PyTorch](https://github.com/tristandeleu/pytorch-meta):  A collection of meta-learning algorithms implemented in PyTorch.
+
+* **Interpretability and Explainability:**
+    * [Captum](https://captum.ai/): Model interpretability and understanding for PyTorch.
+    * [Integrated Gradients](https://github.com/ankurtaly/Integrated-Gradients):  This repo contains code for computing Integrated Gradients (IG) attributions for a given network and input.
+    * [SHAP](https://github.com/slundberg/shap): A game theoretic approach to explain the output of any machine learning model.
+
+
+* **Ethical AI and Bias Mitigation:**
+    * [Fairlearn](https://fairlearn.org/): A Python package to assess and improve fairness of machine learning models.
+    * [AI Fairness 360](https://aif360.mybluemix.net/): An extensible open-source toolkit for measuring, understanding, and mitigating unwanted bias in datasets and machine learning models.
+    * [Adversarial Debiasing](https://github.com/jaeho-lee/Adversarial-Debiasing):  Code for reproducing experiments of "Regularizing Neural Networks by Penalizing Confident Output Distributions".
+
+
+* **Reinforcement Learning (RL) Frameworks:**
+    * [CleanRL](https://github.com/vwxyzjn/cleanrl): High-quality single file implementation of Deep Reinforcement Learning algorithms with research-friendly features (PPO, DQN, C51, DDPG, TD3, SAC, PPG).
+    * [PEARL](https://github.com/kateregga1/PEARL):  Code for Probabilistic Embeddings for Actor-critic Reinforcement Learning.
+    * [OpenAI Gym](https://github.com/openai/gym): A toolkit for developing and comparing reinforcement learning algorithms.
+    * [Stable Baselines](https://stable-baselines.readthedocs.io/en/master/): A set of improved implementations of reinforcement learning algorithms based on OpenAI Baselines.
+
+* **General Advanced ML/AI, LLMs, Graph Databases, Automated Software Development, Data Processing, Open Source Repos:** *See previous responses for a detailed breakdown of these categories.*
