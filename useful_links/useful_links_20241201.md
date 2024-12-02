@@ -63,3 +63,4 @@ https://medium.com/thedeephub/convolutional-neural-networks-a-comprehensive-guid
 https://medium.com/@mdsharique0107/structured-data-analysis-using-knowledge-graph-llm-b1f7db88edd3
 https://github.com/microsoft/graphrag?tab=readme-ov-file
 https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/
+https://neo4j.com/docs/getting-started/cypher/
