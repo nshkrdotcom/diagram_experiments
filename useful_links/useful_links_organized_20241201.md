@@ -15,6 +15,9 @@
     * [Langroid](https://github.com/langroid/langroid)
     * [Microsoft GraphRAG](https://github.com/microsoft/graphrag), [Microsoft GraphRAG Overview](https://github.com/microsoft/graphrag?tab=readme-ov-file), [Microsoft GraphRAG Blog](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)
 
+* **Deep Learning:**
+    * [Keras](https://github.com/keras-team/keras)
+
 * **RAG (Retrieval Augmented Generation):**
     * [Artifex Blog (PyMuPDF & RAG)](https://artifex.com/blog/rag-llm-and-pdf-conversion-to-markdown-text-with-pymupdf), [Artifex Blog (RAG & Enhanced Text Extraction)](https://artifex.com/blog/rag-llm-and-pdf-enhanced-text-extraction)
     * [PyMuPDF RAG](https://pymupdf.readthedocs.io/en/latest/rag.html)
@@ -75,9 +78,10 @@
 **VII. Code & Research Papers (General):**
 
 * **Code Repositories:**
-    * [OpenHands](https://github.com/All-Hands-AI/OpenHands?tab=readme-ov-file)
+    * [OpenHands](https://github.com/All-Hands-AI/OpenHands)
     * [Auto-Code Rover](https://github.com/nus-apr/auto-code-rover)
     * [SWE-Agent](https://github.com/princeton-nlp/SWE-agent)
+	* [auto-dev](https://github.com/unit-mesh/auto-dev)
     * [DSPy](https://github.com/stanfordnlp/dspy), [Inside DSPy](https://jrodthoughts.medium.com/inside-dspy-a-framework-for-algorithmic-prompt-optimization-dffd9765e596)
     * [Tree-sitter](https://github.com/tree-sitter/tree-sitter), [Tree-sitter Website](https://tree-sitter.github.io/tree-sitter/)
     * [Apple CodeAct](https://machinelearning.apple.com/research/codeact)
@@ -87,7 +91,7 @@
     * [Research Paper 3](https://arxiv.org/abs/2411.16905) (listed twice)
     * [Research Paper 4](https://arxiv.org/pdf/2312.06648)
     * [Research Paper 5](https://arxiv.org/pdf/2402.01030)
-    * [Research Paper 6](https://link.springer.com/article/10.1007/s11334-024-00591-0)
+    * [A Multimodal conceptual framework to achieve automated software evolution for context-rich intelligent applications](https://link.springer.com/article/10.1007/s11334-024-00591-0)
 
 
 **VIII. Miscellaneous:**
@@ -103,7 +107,5 @@
 * [Vercel Project](https://vercel.com/new?teamSlug=gtcodes-projects)
 * [v0.dev Pricing](https://v0.dev/pricing)
 * [AI News](https://www.artificialintelligence-news.com/)
-  [Boundless Socratic Learning with Language Games](https://arxiv.org/pdf/2411.16905)
-
-
-**(Sections related to markdown, LaTeX, specific ML libraries, automated software dev tools, and data processing tools were omitted because they didn't include links, or were descriptions rather than resources.)**
+* [Boundless Socratic Learning with Language Games](https://arxiv.org/pdf/2411.16905)
+* [Papers with Code](https://paperswithcode.com/)

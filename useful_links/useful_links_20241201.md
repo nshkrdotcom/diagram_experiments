@@ -151,8 +151,6 @@
 
 
 
-Absolutely, here are links to the technologies mentioned in our discussion:
-
 **Markdown**:
 - [Markdown-it](https://github.com/markdown-it/markdown-it)
 - [SimpleMDE Markdown Editor](https://github.com/italia/simplemde-markdown-editor)
@@ -212,8 +210,6 @@ Absolutely, here are links to the technologies mentioned in our discussion:
 - [PEARL](https://github.com/kateregga1/PEARL)
 - [OpenAI Gym](https://github.com/openai/gym)
 - [Stable Baselines](https://stable-baselines.readthedocs.io/en/master/)
-
-
 
 
 
