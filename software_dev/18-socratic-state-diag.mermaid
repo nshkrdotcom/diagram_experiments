@@ -1,0 +1,52 @@
+stateDiagram-v2
+    direction TB
+    
+    [*] --> Agent : Initiate
+    
+    state Agent {
+        direction TB
+        Code_Generator --> Knowledge_Base : Draws_From
+        Code_Generator --> Language_Games : Interacts_With
+    }
+    
+    state Language_Games {
+        direction LR
+        Unit_Test_Generation
+        Performance_Optimization
+        Security_Hardening
+        Refactoring
+        API_Design
+    }
+    
+    Agent --> Critic : Generated_Code
+    Critic --> Agent : Feedback
+    
+    state Critic {
+        direction LR
+        Static_Analysis
+        Dynamic_Analysis
+        Formal_Verification
+        Diversity_Assessment
+    }
+    
+    Meta_Critic --> Agent : Oversight
+    Meta_Critic --> Language_Games : Adjust_Scoring
+    
+    state Meta_Critic {
+        direction TB
+        Human_Review
+        Automated_Metrics
+    }
+    
+    Environment --> Agent : Secure_Sandbox
+    
+    state Environment {
+        ASKA
+        IES_Instances
+        DTMS
+        HESE_DAR
+    }
+    
+    Knowledge_Base --> CodeBERT : Enhance_dBy
+    
+    [*] --> Continuous_Improvement
