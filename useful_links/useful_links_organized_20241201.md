@@ -1,4 +1,3 @@
-```
 ## Consolidated List of Resources
 
 This list combines and organizes the provided resources into the following categories:
@@ -102,5 +101,3 @@ This list combines and organizes the provided resources into the following categ
 * AI News: `https://www.artificialintelligence-news.com/`
 
 **(Sections related to markdown, LaTeX, specific ML libraries, automated software dev tools, and data processing tools were omitted because they didn't include links, or were descriptions rather than resources.)**
-```
-
