@@ -1,6 +1,3 @@
-The provided list contains URLs to various resources related to AI, LLMs, and related technologies.  I've sorted them into categories and then alphabetized within each category.  Note that some URLs might fit multiple categories; I've placed them in the category I deemed most appropriate.
-
-
 **I. Retrieval Augmented Generation (RAG) & LLMs:**
 
 * `https://artifex.com/blog/rag-llm-and-pdf-conversion-to-markdown-text-with-pymupdf`
@@ -100,7 +97,3 @@ The provided list contains URLs to various resources related to AI, LLMs, and re
 * `https://vercel.com/new?teamSlug=gtcodes-projects`
 * `https://v0.dev/pricing`
 * `https://www.artificialintelligence-news.com/`
-
-
-This categorization helps organize the resources for easier browsing and understanding of their relevance.  Remember that some URLs may be duplicated due to different variations (e.g., with and without `?tab=readme-ov-file`).
-
