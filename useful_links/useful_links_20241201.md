@@ -264,3 +264,52 @@ Absolutely, here are links to the technologies mentioned in our discussion:
 * **Streamlit:** [https://github.com/streamlit/streamlit](https://github.com/streamlit/streamlit)
 
 
+
+
+**I. PDF Table Extraction:**
+
+* **Tabula:** [https://github.com/tabulapdf/tabula](https://github.com/tabulapdf/tabula)
+* **Camelot:** [https://github.com/camelot-dev/camelot](https://github.com/camelot-dev/camelot)
+
+
+**II. PDF to Markdown/LaTeX Conversion:**
+
+* **Arachnid:** [https://github.com/arachnidlabs/arachnid](https://github.com/arachnidlabs/arachnid)  (Markdown intermediary)
+* **Grobid:** [https://github.com/kermitt2/grobid](https://github.com/kermitt2/grobid) (Direct PDF to LaTeX, scholarly documents)
+
+
+**III.  NLP & Document Understanding:**
+
+* **spaCy:** [https://github.com/explosion/spaCy](https://github.com/explosion/spaCy)
+* **Rasa:** [https://github.com/RasaHQ/rasa](https://github.com/RasaHQ/rasa)
+* **Haystack:** [https://github.com/deepset-ai/haystack](https://github.com/deepset-ai/haystack)
+
+
+**IV. ML Pipelines & Workflows:**
+
+* **MLflow:** [https://github.com/mlflow/mlflow](https://github.com/mlflow/mlflow)
+* **Kubeflow:** [https://github.com/kubeflow/kubeflow](https://github.com/kubeflow/kubeflow)
+* **TensorFlow Extended (TFX):** [https://github.com/tensorflow/tfx](https://github.com/tensorflow/tfx)
+
+
+**V. Computer Vision & OCR:**
+
+* **OpenCV:** [https://github.com/opencv/opencv](https://github.com/opencv/opencv)
+* **Tesseract OCR:** [https://github.com/tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract)
+* **Detectron2:** [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)
+
+
+**VI. Tabular Data Processing:**
+
+* **Pandas:** [https://github.com/pandas-dev/pandas](https://github.com/pandas-dev/pandas)
+* **Polars:** [https://github.com/pola-rs/polars](https://github.com/pola-rs/polars)
+* **Deta (Database):** [https://github.com/MaksimPv/Deta](https://github.com/MaksimPv/Deta)
+
+
+**VII. Visualization & Reporting:**
+
+* **Matplotlib:** [https://github.com/matplotlib/matplotlib](https://github.com/matplotlib/matplotlib)
+* **Plotly:** [https://github.com/plotly/plotly.py](https://github.com/plotly/plotly.py)
+* **Streamlit:** [https://github.com/streamlit/streamlit](https://github.com/streamlit/streamlit)
+
+
