@@ -78,6 +78,7 @@
     * [DSPy](https://github.com/stanfordnlp/dspy), [Inside DSPy](https://jrodthoughts.medium.com/inside-dspy-a-framework-for-algorithmic-prompt-optimization-dffd9765e596)
     * [Tree-sitter](https://github.com/tree-sitter/tree-sitter), [Tree-sitter Website](https://tree-sitter.github.io/tree-sitter/)
     * [Apple CodeAct](https://machinelearning.apple.com/research/codeact)
+    * [Executable Actions Elicit Better LLM Agents](https://arxiv.org/pdf/2402.01030)
 
 * **Research Papers:**
     * [Research Paper 3](https://arxiv.org/abs/2411.16905) (listed twice)
