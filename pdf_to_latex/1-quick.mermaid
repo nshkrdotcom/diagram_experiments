@@ -1,0 +1,11 @@
+graph 
+    A[PDF Input] --> B{Rasterization & OCR};
+    B --> C[Text Representation];
+    C --> D{Structure Analysis & Parsing};
+    D --> E[Persistence Layer];
+    E -- Graph(s) --> F;
+    E -- AST(s) --> F;
+    E -- Relational DB --> F;
+    E -- Misc Data --> F;
+    F[Integrated Data] --> G{LaTeX Generation};
+    G --> H[LaTeX Output];
