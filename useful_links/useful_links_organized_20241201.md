@@ -99,5 +99,7 @@
 * [Vercel Project](https://vercel.com/new?teamSlug=gtcodes-projects)
 * [v0.dev Pricing](https://v0.dev/pricing)
 * [AI News](https://www.artificialintelligence-news.com/)
+  [Boundless Socratic Learning with Language Games](https://arxiv.org/pdf/2411.16905)
+
 
 **(Sections related to markdown, LaTeX, specific ML libraries, automated software dev tools, and data processing tools were omitted because they didn't include links, or were descriptions rather than resources.)**
