@@ -50,8 +50,11 @@ This list combines and organizes the provided resources into the following categ
 **IV. Genetic Algorithms:**
 
 * DEAP: `https://deap.readthedocs.io/en/master/examples/index.html`
+* DEAP: `https://github.com/DEAP/deap`
 * Traveling Salesman Example: `https://medium.com/aimonks/traveling-salesman-problem-tsp-using-genetic-algorithm-fea640713758`
 * PyGAD Tutorial: `https://www.digitalocean.com/community/tutorials/genetic-algorithm-applications-using-pygad`
+* inspyred: `https://github.com/aarongarrett/inspyred`
+* Platypus: `https://github.com/Project-Platypus/Platypus`
 
 
 **V. PDF Processing & Text Extraction:**
