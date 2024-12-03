@@ -38,7 +38,12 @@
     * [AllenNLP](https://allennlp.org/): An open-source NLP research library, built on PyTorch.
     * [PyTorch Lightning](https://www.pytorchlightning.ai/):  The lightweight PyTorch wrapper for high-performance AI research.
 
+* **Natural Language and Human Interfaces**
 
+       * [Open Interpretor](https://github.com/OpenInterpreter/open-interpreter)
+       * [Open Adapt](https://github.com/OpenAdaptAI/OpenAdapt)
+    * [StackBlitz](https://github.com/stackblitz)
+    * [WebSim](https://websim.ai/)
 
 **II. Reinforcement Learning (RL):**
 
@@ -48,7 +53,8 @@
     * [Pearl](https://github.com/facebookresearch/Pearl):  Code for the PEARL meta-RL algorithm.
     * [Awesome RL Resources](https://github.com/aikorea/awesome-rl?tab=readme-ov-file): A curated list of reinforcement learning resources.
     * [OpenAI Gym](https://github.com/openai/gym): A toolkit for developing and comparing reinforcement learning algorithms.
-    * [Stable Baselines](https://stable-baselines.readthedocs.io/en/master/): A set of improved implementations of reinforcement learning algorithms based on OpenAI Baselines.
+    * [Gymnasium](https://github.com/Farama-Foundation/Gymnasium): Replaces Gym
+	* [Stable Baselines](https://stable-baselines.readthedocs.io/en/master/): A set of improved implementations of reinforcement learning algorithms based on OpenAI Baselines.
     * [Ray](https://www.ray.io/): A fast and simple framework for building and running distributed applications.  *(Also relevant to LLMs)*
 
 * **Research Papers:**
@@ -57,7 +63,7 @@
     * [Research Paper - Scaling Laws for Reward Model Overoptimization](https://arxiv.org/pdf/2312.06648).
     * [Research Paper - Executable Actions Elicit Better LLM Agents](https://arxiv.org/pdf/2402.01030).  *(Also relevant to LLMs)*
     * [Reddit Discussion on RL Frameworks](https://reddit.com/r/reinforcementlearning/comments/191yu6y/best_rl_research_framework/): Community discussion on the best RL frameworks.
-
+	* [List of Multi Agent Reinforcement Learning Papers](https://github.com/LantaoYu/MARL-Papers)
 
 
 **III. Hyperparameter Optimization:**
