@@ -1,0 +1,27 @@
+graph LR
+    subgraph "Rat Brain Interface"
+        Rat["Rat (In Vivo/Ex Vivo)"] --> BCI["Wireless BCI"]
+        Stimulus["Pleasure Stimuli"] --> Rat
+        BCI --> NeuralData["Neural Data"]
+    end
+
+    subgraph "AI System"
+        NeuralData --> Decoder["Neural Decoder"]
+        Decoder --> PleasureModel["Pleasure Model"]
+        PleasureModel --> QuantumPlatform["Quantum Sentience Platform"]
+    end
+    
+    subgraph "Simulated Rat Brain"
+        QuantumPlatform --> SimulatedBrain["Simulated Brain"]
+        SimulatedBrain --> AgentActionsSim["Agent Actions (Sim)"]
+    end
+
+    subgraph "Embodied Agent"
+        AgentActionsSim --> VirtualEnvironment["Virtual Environment"]
+        BCI --> AgentActionsBio["Agent Actions (Bio)"]
+        AgentActionsBio --> VirtualEnvironment
+        VirtualEnvironment --> Stimulus
+    end
+    AgentActionsSim & AgentActionsBio --> Comparator["Comparator"]
+
+    style QuantumPlatform fill:#ccf,stroke:#888,stroke-width:2px
