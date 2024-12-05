@@ -152,3 +152,12 @@ This direction builds upon the idea of using chiral pairs to connect parallel le
 
 This research direction moves beyond simply training parallel models. It proposes a framework for automated narrative synthesis guided by chirality, providing a novel approach to scientific discovery and knowledge integration. The use of multi-agent RL with specialized roles, dynamic chiral interaction, and a multi-objective reward function allows for a more flexible, adaptive, and potentially more creative system. This research could have significant implications for accelerating scientific progress by automating the process of hypothesis generation, evaluation, and synthesis.
 
+
+# Chiral in context of DANP
+
+## [DANP Doc](..\danp\1-danp.md)
+
+6. **Chiral Narrative Integration:**
+    *   **Narrative Construction:** Each ASKA instance maintains a set of narratives representing its understanding of the network state, security threats, and data integrity.
+    *   **Chiral Connections:**  Chiral connections are established between ASKA instances that hold opposing or complementary narratives about the network. This could be used to identify potential misinformation or manipulation attempts by identifying chiral pairs between networks that represent distinct narratives but that exhibit similar network activation patterns or message passing structure or which show other non-intuitive or statistically unlikely traits given what we know about those narratives to be true, and by investigating these chiral or other topological properties that emerge from the aggregate behaviour of your multi-agent system in this multi-network mesh it might be possible to identify new forms of attack or intrusion, or discover and patch some flaw in your models' representation of truth which would only then become apparent when viewed through this new type of combined or otherwise synthetic perspective that chiral interaction analysis allows or through similar methods.&#x20;
+    *   **Narrative Synthesis:**  Through the interaction of chiral narratives, ASKA instances can refine their understanding of the network state and improve their security posture.
