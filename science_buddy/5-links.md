@@ -30,3 +30,8 @@
 
 - **[pykeen/pykeen](https://github.com/pykeen/pykeen)**
   - Description: A Python library for learning and evaluating knowledge graph embeddings, useful for AI-driven knowledge synthesis and discovery.
+
+  **[Accenture/Ampligraph](https://github.com/Accenture/AmpliGraph)**
+  - Description: Python library for Representation Learning on Knowledge Graphs
+
+
