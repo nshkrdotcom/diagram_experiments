@@ -38,3 +38,9 @@
 
 - **[GitHub Topics: Machine Learning](https://github.com/topics/machine-learning)**
   - Description: A curated list of repositories related to machine learning on GitHub, offering a wide range of tools and libraries for AI research.
+
+### QwQ
+
+  **[QwQ](https://huggingface.co/spaces/Qwen/QwQ-32B-preview)**
+  **[QwQ Discuss](https://qwenlm.github.io/blog/qwq-32b-preview/)**
+
