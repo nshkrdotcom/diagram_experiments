@@ -6,6 +6,18 @@
 - **[Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)**
   - Description: This paper explores how language models can autonomously learn to use external tools, potentially improving their problem-solving capabilities.
 
+
+# Master Multi Agents - React Framework
+
+## MONITOR HALLUCINATIONS ACROSS AGENT: Use react's reasoning to avoid things like hallucinations or misinformation build on itself
+
+## DEFINE CLEAR BOUNDARIES FOR EACH AGENT:	Agents have well defined roles - 
+
+## Human in the loop (HITL) for high stakes decisions
+
+## Avoid overautomation - he prayed bc safety runaway gray goo (my guess)
+
+
 - **[ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)**
   - Description: A study on integrating reasoning and action in language models to enhance their ability to interact with the world and perform complex tasks.
 
