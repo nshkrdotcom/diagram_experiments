@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\title{Math Terms}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Mathematical Terms and Definitions}
+
+\subsection{Topology}
+
+\begin{itemize}
+    \item \textbf{Topological Space:} A set equipped with a topology, which is a collection of open sets satisfying certain axioms.
+    \item \textbf{Topological Invariant:} A property of a topological space that remains unchanged under continuous transformations (e.g., homeomorphisms). Examples include connectedness, compactness, and homotopy groups.
+    \item \textbf{Manifold:} A topological space that locally resembles Euclidean space.
+    \item \textbf{Chirality (in topology): } A property of a topological space that is asymmetric under certain transformations (e.g., reflection).  A chiral space cannot be superimposed on its mirror image.
+    \item \textbf{Orthogonality (in vector spaces): } Two vectors are orthogonal if their dot product is zero. This represents independence in vector spaces.
+    \item \textbf{Cosine Similarity:} The cosine of the angle between two vectors, measuring their similarity in direction. It is given by the dot product of the two vectors divided by the product of their magnitudes.
+    \item \textbf{Hamming Distance:} The number of positions at which two vectors differ. Used to measure the distance between binary vectors representing narratives.
+    \item \textbf{Shortest Path Length:} In a graph, the shortest distance between two nodes, considering only the edges and edge weights.
+    \item \textbf{Persistent Homology:} A technique in topological data analysis that identifies topological features (e.g., connected components, loops, voids) at multiple scales.
+    \item \textbf{Topological Distance:} A measure of distance between two points in a topological space, reflecting their topological relationships.
+\end{itemize}
+
+
+\subsection{Linear Algebra}
+
+\begin{itemize}
+    \item \textbf{Vector:} An ordered collection of numbers.
+    \item \textbf{Dot Product:}  A measure of the similarity between two vectors.  For vectors $u, v \in \mathbb{R}^n$,  $u \cdot v = \sum_{i=1}^n u_i v_i$.
+    \item \textbf{Cross Product (in $\mathbb{R}^3$): } A binary operation on two vectors in $\mathbb{R}^3$ producing a vector orthogonal to both inputs.
+    \item \textbf{Matrix:} A rectangular array of numbers.
+    \item \textbf{Matrix Multiplication (matmul): } A binary operation on two matrices under certain dimensional compatibility constraints.
+    \item \textbf{Projection Operator:} A linear transformation that projects a vector onto a subspace.
+    \item \textbf{Rotation Matrix:} A matrix representing a rotation in space.
+\end{itemize}
+
+\subsection{Calculus and Optimization}
+
+\begin{itemize}
+    \item \textbf{Gradient:} A vector pointing in the direction of the steepest ascent of a function.
+    \item \textbf{Gradient Descent:} An iterative optimization algorithm that moves in the direction of the negative gradient to minimize a function.
+    \item \textbf{Learning Rate:} A parameter controlling the step size in gradient descent.
+    \item \textbf{Loss Function:} A function measuring the difference between predictions and actual values.
+    \item \textbf{Convergence (of optimization algorithm): }  An algorithm converges if it reaches a minimum or stationary point of the function being optimized.
+    \item \textbf{Local Minimum:} A point that is a minimum within a local neighborhood.
+    \item \textbf{Global Minimum:} The absolute minimum value of a function.
+\end{itemize}
+
+
+\subsection{Information Theory}
+
+\begin{itemize}
+    \item \textbf{Mutual Information:}  A measure of the mutual dependence between two random variables.
+    \item \textbf{Entropy:} A measure of uncertainty in a random variable.
+    \item \textbf{Information Gain:}  The reduction in uncertainty achieved by observing a random variable.
+\end{itemize}
+
+
+\subsection{Graph Theory}
+
+\begin{itemize}
+    \item \textbf{Graph:} A mathematical structure representing relationships between objects (nodes or vertices) connected by edges.
+    \item \textbf{Directed Graph:} A graph where edges have a direction.
+    \item \textbf{Weighted Graph:} A graph where edges have associated weights.
+    \item \textbf{Node Centrality:}  A measure of a node's importance in a graph.  Different centrality measures exist, capturing various aspects of importance.
+    \item \textbf{Community Structure (in graphs): } The division of nodes into groups or communities based on connectivity patterns.
+    \item \textbf{Shortest Path:} The shortest sequence of edges connecting two nodes in a graph.
+    \item \textbf{Path Length:} The number of edges in a path.
+\end{itemize}
+
+
+\subsection{Reinforcement Learning}
+
+\begin{itemize}
+    \item \textbf{Agent:} An entity that learns to interact with an environment.
+    \item \textbf{Environment:} The system the agent interacts with.
+    \item \textbf{State:} A representation of the environment.
+    \item \textbf{Action:} A decision made by the agent.
+    \item \textbf{Reward:} A scalar value reflecting the desirability of a state or action.
+    \item \textbf{Policy:} A strategy that maps states to actions.
+    \item \textbf{Value Function:} A function estimating the expected cumulative reward from a given state.
+    \item \textbf{Q-value:} The expected cumulative reward for taking a given action in a given state.
+    \item \textbf{Learning Rate (in RL): } A parameter controlling the speed of learning in the reinforcement learning algorithm.
+    \item \textbf{Discount Factor (in RL): }  A parameter controlling the relative importance of immediate rewards versus future rewards.
+\end{itemize}
+
+
+\section{Mathematical Formulas}
+
+\subsection{Chiral Gradient Descent (CGD) Formulas}
+
+\begin{enumerate}
+    \item  Equation \ref{eq:cgd_sigmoid}:  
+    \[
+    \boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t - \alpha \nabla L(\boldsymbol{\theta}_t) + \beta \sum_{i,j \in C} s(w_{ij}, \mathbf{c}_{ij}) (\nabla L(\boldsymbol{\theta}_t) \times \mathbf{c}_{ij})
+    \]
+    \item Equation \ref{eq:cgd_sigmoid_final}:
+    \[
+    \boldsymbol{\theta}_{t+1} = \boldsymbol{\theta}_t - \alpha \nabla L(\boldsymbol{\theta}_t) + \beta \sum_{i,j \in C(\boldsymbol{\theta}_t)}  \frac{\| \mathbf{c}_{ij} \|}{1 + e^{-\gamma d_{ij}}} (\nabla L(\boldsymbol{\theta}_t) \times \mathbf{c}_{ij})
+    \]
+    \item Chirality Score:
+    \[
+    C_i(t) = \sum_{j \in N(i)} w_{ij} \times A(v_i, v_j)
+    \]
+    \item Learning Rate Update:
+    \[
+    \eta_i(t+1) = \eta_i(t) \times (1 + \beta \times C_i(t))
+    \]
+    \item Chiral Similarity:
+    \[
+    CS(N_i, N_j) = w_f \times sim(F_i, F_j) + w_c \times sim(C_i, C_j) + w_t \times |T_i - T_j|
+    \]
+    \item Orthogonal Similarity:
+    \[
+    OS(N_i, N_j) = 1 - |CS(N_i, N_j)|
+    \]
+    \item Q-Learning Update:
+    \[
+    Q(s, a) = Q(s, a) + \alpha \times [R(s, a, s') + \gamma \times \max_{a'} Q(s', a') - Q(s, a)]
+    \]
+\end{enumerate}
+
+
+\section{Conjectures}
+
+\subsection{Chiral Convergence Conjecture}
+
+In a multi-agent system performing narrative synthesis, the presence of both chiral and orthogonal narratives, coupled with local explanations, strictly increases the rate of convergence towards the ground truth embedding, compared to systems utilizing only chiral or only orthogonal narratives, when measured relative to the resources consumed. This increase in convergence is not merely due to the increased number of narratives but arises from the synergistic interaction of chiral and orthogonal information, especially in high-dimensional narrative spaces with complex topological features.
+
+\end{document}
+

@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\title{Chiral Pair Identification Algorithms: Detailed Implementations}
+\author{Gemini}
+\date{December 8, 2024}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document details various algorithms for identifying chiral pairs within the Chiral Narrative Synthesis (CNS) framework. We explore different approaches based on feature embeddings, graph structures, contextual information, and confidence scores.  We also consider hierarchical and multi-agent implementations, emphasizing scalability and practical considerations for real-world applications.
+\end{abstract}
+
+\section{Chiral Pair Identification Algorithms}
+
+\subsection{Basic Chiral Pair Identification (using cosine similarity)}
+
+This algorithm identifies chiral pairs based on high cosine distance between feature embeddings and individual convergence towards the truth embedding.
+
+\begin{algorithm}[H]
+\caption{Basic Chiral Pair Identification}
+\begin{algorithmic}[1]
+\Require Feature embeddings $F = \{F_1, \dots, F_n\}$, Truth embedding $T$, Distance threshold $\tau_d$, Similarity threshold $\tau_s$
+\State Initialize empty set of chiral pairs $C$
+\For{each pair of narratives $(N_i, N_j)$}
+    \If{$d(F_i, F_j) > \tau_d$ and $sim(F_i, T) > \tau_s$ and $sim(F_j, T) > \tau_s$}
+        \State $C \gets C \cup \{(N_i, N_j)\}$
+    \EndIf
+\EndFor
+\Return $C$
+\end{algorithmic}
+\end{algorithm}
+
+Where \(d(F_i, F_j)\) is the cosine distance and \(sim(F_i, T)\) is the cosine similarity.
+
+
+\subsection{Chiral Pair Identification with Context and Confidence}
+
+This algorithm extends the basic approach by incorporating contextual similarity and confidence score differences.
+
+\begin{algorithm}[H]
+\caption{Chiral Pair Identification with Context and Confidence}
+\begin{algorithmic}[1]
+\Require Narratives $N = \{N_1, \dots, N_n\}$, Truth embedding $T$, Weights $w_f, w_c, w_t$, Chirality threshold $\tau_c$
+\State Initialize empty set of chiral pairs $C$
+\For{each pair of narratives $(N_i, N_j)$}
+    \State $CS_{ij} \gets w_f \cdot sim(F_i, F_j) + w_c \cdot sim(C_i, C_j) + w_t \cdot |T_i - T_j|$
+    \If{$CS_{ij} > \tau_c$ and $T_i > 0$ and $T_j > 0$} \Comment{Require non-zero confidence}
+        \State $C \gets C \cup \{(N_i, N_j)\}$
+    \EndIf
+\EndFor
+\Return $C$
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Hierarchical Chiral Pair Identification}
+
+This algorithm recursively identifies chiral pairs within subgraphs, capturing chirality at multiple levels.
+
+\begin{algorithm}[H]
+\caption{Hierarchical Chiral Pair Identification}
+\begin{algorithmic}[1]
+\Require Graph $G$, Feature embeddings $F$, Truth embedding $T$, Thresholds $\tau_d, \tau_s$
+\Function{FindChiralPairs}{$G, F, T, \tau_d, \tau_s$}
+    \State $C \gets \text{BasicChiralPairIdentification}(F, T, \tau_d, \tau_s)$
+    \For{each subgraph $G_s$ of $G$}
+        \State $F_s \gets \text{Embeddings for } G_s$
+        \State $T_s \gets \text{Truth embedding for } G_s$ \Comment{Potentially adjusted for subgraph}
+        \State $C_s \gets \text{FindChiralPairs}(G_s, F_s, T_s, \tau_d, \tau_s)$
+        \State $C \gets C \cup C_s$
+    \EndFor
+    \Return $C$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Multi-Agent Chiral Pair Identification}
+
+This algorithm distributes the chiral pair identification process among multiple agents.
+
+\begin{algorithm}[H]
+\caption{Multi-Agent Chiral Pair Identification}
+\begin{algorithmic}[1]
+\Require Narratives $N$, Truth embedding $T$, Number of agents $k$
+\State Partition $N$ into $k$ subsets $N_1, \dots, N_k$
+\For{each agent $i$}
+    \State $C_i \gets \text{ChiralPairIdentification}(N_i, T)$ \Comment{Using any chiral pair identification method}
+\EndFor
+\State $C \gets \bigcup_{i=1}^k C_i$
+\State \Comment{Optional: Resolve conflicts or inconsistencies between $C_i$}
+\Return $C$
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Chiral Pair Identification with LIME}
+
+This algorithm uses LIME to explain chiral relationships and guide the identification process.
+
+\begin{algorithm}[H]
+\caption{Chiral Pair Identification with LIME}
+\begin{algorithmic}[1]
+\Require Narratives $N$, Truth embedding $T$, LIME explainer
+\State Initialize empty set of chiral pairs $C$
+\For{each pair of narratives $(N_i, N_j)$}
+    \State $CS_{ij} \gets \text{ChiralScore}(N_i, N_j)$
+    \If{$CS_{ij}$ is high}
+        \State $Explanation \gets \text{LIME}(N_i, N_j, T)$
+        \If{$Explanation$ indicates a meaningful chiral relationship}
+            \State $C \gets C \cup \{(N_i, N_j)\}$
+        \EndIf
+    \EndIf
+\EndFor
+\Return $C$
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Chiral Pair Identification with Spiral Descent Feedback}
+
+This algorithm incorporates feedback from the spiral descent process to dynamically adjust the chiral pair selection.
+
+\begin{algorithm}[H]
+\caption{Chiral Pair Identification with Spiral Descent Feedback}
+\begin{algorithmic}[1]
+\Require Narratives $N$, Truth embedding $T$, Spiral descent parameters
+\State Initialize chiral pairs $C$
+\Repeat
+    \State Perform spiral descent using $C$
+    \State Analyze narrative changes and convergence rates
+    \State Update $C$ based on feedback (e.g., prioritize pairs contributing to faster convergence)
+\Until{Convergence criteria met}
+\Return $C$
+\end{algorithmic}
+\end{algorithm}
+
+
+\end{document}

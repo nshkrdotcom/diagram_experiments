@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\newtheorem{conjecture}{Conjecture}
+
+\title{Chiral Narrative Synthesis: A Mathematical Framework}
+\author{Gemini}
+\date{December 7, 2024}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document formalizes the core mathematical concepts and conjectures of Chiral Narrative Synthesis (CNS), a framework for multi-agent reinforcement learning designed to accelerate scientific discovery by leveraging chiral and orthogonal relationships between narratives.  We define narratives as structured representations of hypotheses, introduce measures for chirality and orthogonality, and propose a reinforcement learning approach to guide narrative synthesis towards a shared understanding of truth.  We also explore Bayesian perspectives and the implications of spatiotemporal digests for verifying truth claims.
+\end{abstract}
+
+
+\section{Mathematical Terms and Definitions}
+
+\subsection{Narratives and Truth}
+
+\begin{itemize}
+    \item \textbf{Narrative ($N_i$): } A structured representation of a hypothesis, perspective, or theory, represented as a tuple: $N_i = (G_i, F_i, C_i, T_i)$, where:
+        \begin{itemize}
+            \item $G_i$: Graph embedding of the narrative structure (e.g., using GCNs).
+            \item $F_i$: Feature embedding capturing the semantic content.
+            \item $C_i$: Embedding of contextual features (including spatiotemporal digests).
+            \item $T_i$: Confidence score $\in [0, 1]$.
+        \end{itemize}
+    \item \textbf{Truth Embedding ($T$): }  The current best approximation of ground truth, represented similarly to a narrative: $T = (G_t, F_t, C_t, T_t)$, where $T_t$ is the overall confidence in the current understanding of truth.
+    \item \textbf{Narrative Space (NS): } The set of all possible narratives, conceptualized as a high-dimensional topological space.
+\end{itemize}
+
+\subsection{Relationships between Narratives}
+
+\begin{itemize}
+    \item \textbf{Chiral Narratives:} Narratives representing opposing but partially correct perspectives relative to $T$.
+    \item \textbf{Orthogonal Narratives:} Narratives providing independent, potentially complementary information.
+    \item \textbf{Chiral Similarity ($CS$): } Measures the degree of opposition between two narratives, incorporating feature, context, and confidence differences:
+    \[ CS(N_i, N_j) = w_f \cdot sim(F_i, F_j) + w_c \cdot sim(C_i, C_j) + w_t \cdot |T_i - T_j| \]
+    where $sim$ denotes cosine similarity and $w_f, w_c, w_t$ are weights.
+    \item \textbf{Orthogonal Similarity ($OS$): } Measures the degree of independence between narratives:
+    \[ OS(N_i, N_j) = 1 - |CS(N_i, N_j)| \]
+\end{itemize}
+
+\subsection{Spiral Descent and Refinement}
+
+\begin{itemize}
+    \item \textbf{Narrative Refinement ($\Delta N_i$): } A change in a narrative based on feedback and interaction, represented as a vector in NS.
+    \item \textbf{Spiral Descent Function:} Guides narrative refinement using gradients, chiral/orthogonal influences, and local explanations (LIME):
+    \[ \Delta N_i = g(\nabla_{NS} L(N_i), CS(N_i, N_j), OS(N_i, N_k), LIME(N_i), \dots) \]
+    where $g$ is a function to be defined, and $L(N_i)$ is a loss function in narrative space.
+\end{itemize}
+
+\subsection{Spatiotemporal Digests}
+
+\begin{itemize}
+    \item \textbf{4D Timeline ($X$): } 4-dimensional spacetime.
+    \item \textbf{Raster Recording ($R$): } $R: X_r \to D$, maps a spatiotemporal region $X_r \subset X$ to data values $D$.
+    \item \textbf{Spatiotemporal Digest ($S$): } $S: X_r \to H$, maps $X_r$ to a digest value $H$ (e.g., cryptographic hash).
+    \item \textbf{Strong Verification ($V$): } $V(R, S) \to \{\text{True, False}\}$, verifies if $S$ is a valid digest for $R$.
+    \item \textbf{Levels of Truth ($T_n$): } A hierarchy of truth levels based on verification methods (digest, multi-witness, contextual).
+\end{itemize}
+
+\subsection{Other Relevant Concepts}
+
+\begin{itemize}
+    \item \textbf{Bayesian Narrative Representation:} $N_i \equiv P(W|N_i)$, the probability distribution over world states $W$ given narrative $N_i$.
+    \item \textbf{Narrative Synthesis (Bayesian): } $Synth(N_i, N_j) = N_k \equiv P(W|N_i, N_j)$.
+    \item \textbf{Kullback-Leibler (KL) Divergence:} Measures the difference between two probability distributions.
+    \item \textbf{Jensen-Shannon (JS) Divergence:}  A symmetrized and smoothed version of KL divergence.
+    \item \textbf{Mutual Information:} Measures the mutual dependence between two random variables.
+    \item \textbf{Graph Convolutional Networks (GCNs): } Neural networks designed to operate on graph-structured data.
+    \item \textbf{Locality Sensitive Hashing (LSH): }  Technique for efficient approximate nearest neighbor search in high-dimensional spaces.
+\end{itemize}
+
+
+\section{Mathematical Formulas and Algorithms}
+
+\subsection{Core CNS Formulas}
+
+\begin{enumerate}
+    \item \textbf{Narrative Synthesis (embedding-based): }
+    \[ F_k = \frac{T_i F_i + T_j F_j}{T_i + T_j} \]
+    \item \textbf{Reinforcement Learning Update:}
+    \[ Q(s, a) = Q(s, a) + \alpha [R(s, a, s') + \gamma \max_{a'} Q(s', a') - Q(s, a)] \]
+    \item \textbf{Bayesian Narrative Synthesis:}
+    \[ P(W|N_i, N_j) \propto P(N_i|W)P(N_j|W) \]
+\end{enumerate}
+
+\subsection{Chiral Pair Identification Algorithm (Illustrative)}
+
+\begin{algorithm}[H]
+\caption{Chiral Pair Identification}
+\begin{algorithmic}[1]
+\Require Graph $G=(V,E)$, Feature embeddings $F$, Chirality threshold $\tau$
+\State Initialize empty set of chiral pairs $C$
+\For{each pair of nodes $(v_i, v_j) \in V \times V$}
+    \State $S_{ij} \gets \text{ChiralScore}(F_i, F_j)$ \Comment{Using a defined Chiral Score function}
+    \If{$S_{ij} > \tau$}
+        \State $C \gets C \cup \{(v_i, v_j)\}$
+    \EndIf
+\EndFor
+\Return $C$
+\end{algorithmic}
+\end{algorithm}
+
+
+\section{Core Conjectures}
+
+\begin{conjecture}[Chiral Convergence Conjecture]
+The presence and resolution of chiral and orthogonal relationships between narratives, coupled with local explanations, accelerates convergence towards a higher confidence shared understanding of truth in a multi-agent narrative synthesis system.
+\end{conjecture}
+
+\begin{conjecture}[Bayesian Narrative Synthesis]
+If $N_i$ and $N_j$ are two narratives, the confidence score $T_k$ of the synthesized narrative $N_k = Synth(N_i, N_j)$ satisfies $T_k \ge \max(T_i, T_j)$.
+\end{conjecture}
+
+\begin{conjecture}[Chiral Narrative Convergence]
+If $N_i$ and $N_j$ are chiral narratives with high divergence, their synthesis $N_k$ will converge faster towards the truth $T$ compared to the individual narratives.
+\end{conjecture}
+
+\begin{conjecture}[Orthogonal Narrative Complementarity]
+If $N_i$ and $N_j$ are orthogonal narratives with low mutual information, their synthesis $N_k$ will have a higher confidence score than either individual narrative: $T_k > \max(T_i, T_j)$.
+\end{conjecture}
+
+
+\end{document}

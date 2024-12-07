@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{conjecture}{Conjecture}
+
+\title{Implicit Conjectures in Chiral Narrative Synthesis}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Bayesian Narrative Representation}
+
+A narrative $N_i$ is represented as a conditional probability distribution over world states $W$:
+
+\[
+N_i \equiv P(W|N_i)
+\]
+
+\section{Narrative Synthesis}
+
+The synthesis of two narratives $N_i$ and $N_j$ is represented as a Bayesian update:
+
+\[
+Synth(N_i, N_j) = N_k \equiv P(W|N_i, N_j)
+\]
+
+Assuming conditional independence between narratives given the world state, and given a uniform prior $P(W)$, we have:
+\[P(W|N_i, N_j) \propto P(W|N_i) P(W|N_j) \]
+
+
+\section{Chirality and Orthogonality}
+
+\begin{itemize}
+    \item \textbf{Chirality:}  Two narratives $N_i$ and $N_j$ are chiral if their probability distributions have high divergence (e.g., measured by KL or JS divergence).
+    \item \textbf{Orthogonality:} Two narratives $N_i$ and $N_j$ are orthogonal if they have low mutual information about the world state $W$.
+\end{itemize}
+
+\section{Conjectures}
+
+\begin{conjecture}[Bayesian Narrative Synthesis]
+If $N_i$ and $N_j$ are two narratives with confidence scores $T_i$ and $T_j$ respectively, then the confidence score $T_k$ of the synthesized narrative $N_k = Synth(N_i, N_j)$ satisfies:
+\[
+T_k \ge \max(T_i, T_j)
+\]
+\end{conjecture}
+
+\begin{conjecture}[Chiral Narrative Convergence]
+If $N_i$ and $N_j$ are chiral narratives with high divergence, their synthesis $N_k$ will converge faster towards the truth $T$ compared to the individual narratives.
+\end{conjecture}
+
+\begin{conjecture}[Orthogonal Narrative Complementarity]
+If $N_i$ and $N_j$ are orthogonal narratives with low mutual information, their synthesis $N_k$ will have a higher confidence score than either individual narrative:
+\[
+T_k > \max(T_i, T_j)
+\]
+\end{conjecture}
+
+
+\end{document}
+

@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\title{Math Terms Continued}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Mathematical Terms and Definitions (Continued)}
+
+\subsection{Reinforcement Learning (Continued)}
+
+\begin{itemize}
+    \item \textbf{Multi-Agent Reinforcement Learning (MARL): } Reinforcement learning extended to multiple interacting agents.
+    \item \textbf{Decentralized RL: } MARL where agents do not have a central controller or global knowledge of the environment.
+    \item \textbf{Multi-Objective RL: } RL where the agent has multiple goals or reward functions to optimize.
+    \item \textbf{Adversarial RL: } RL where two or more agents compete against each other.
+    \item \textbf{Meta-Learning (in RL): }  Learning to learn;  an RL agent learns to adapt its learning strategy based on experience.
+\end{itemize}
+
+
+\subsection{Local Interpretable Model-agnostic Explanations (LIME)}
+
+\begin{itemize}
+    \item \textbf{Local Explanation:}  An explanation of a single prediction made by a machine learning model.
+    \item \textbf{Interpretable Model:}  A model whose predictions are easily understandable by humans (e.g., linear model, decision tree).
+    \item \textbf{Model-Agnostic:} A method that can be applied to any machine learning model, regardless of its internal structure.
+    \item \textbf{Submodular Pick (SP-LIME): } A method for selecting a representative subset of instances to explain a model's global behavior.
+\end{itemize}
+
+
+\subsection{Additional Terms}
+
+\begin{itemize}
+    \item \textbf{Narrative Space (NS): } The set of all possible narratives, considered as a high-dimensional topological space.
+    \item \textbf{Narrative Refinement ($\Delta N_i$): } A change in a narrative based on feedback and interaction with other narratives.  Represented as a vector in narrative space.
+    \item \textbf{Truth Value ($T_i$): } A measure of the truthfulness of a narrative, represented as a probability or confidence score.
+    \item \textbf{Global Chirality Parameter ($\beta$): } Controls the overall effect of chirality on gradient descent.
+    \item \textbf{Scaling Parameter ($\gamma$): }  Controls the steepness of the sigmoid function, determining how topological distance affects the chiral influence.
+\end{itemize}
+
+
+\section{Mathematical Formulas (Continued)}
+
+\subsection{Additional Formulas}
+
+\begin{enumerate}
+    \item \textbf{Weighted Averaging of Embeddings (during synthesis): }
+    \[
+    F_k = \frac{T_i F_i + T_j F_j}{T_i + T_j}
+    \]
+    \item \textbf{Reward Function (example): }
+    \[
+    R(s, a, s') = w_c Coherence(s') + w_r Resolution(s, a, s') + w_t Convergence(s', T) - w_r RC(a)
+    \]
+    \item \textbf{Average Confidence Score: }
+    \[
+    \frac{1}{n} \sum_{i=1}^n T_i(t)
+    \]
+\end{enumerate}
+
+\section{Conjectures (Continued)}
+
+
+No additional conjectures were explicitly stated in the provided text beyond the refined Chiral Convergence Conjecture already listed.  However,  implicit conjectures exist within the discussions of the Bayesian approach and other high-level concepts.
+
+
+\end{document}
+

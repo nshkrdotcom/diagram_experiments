@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\title{Math Terms Continued}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Mathematical Terms and Definitions (Continued)}
+
+\subsection{Bayesian Inference}
+
+\begin{itemize}
+    \item \textbf{Prior Probability:} The probability of an event before observing any data.
+    \item \textbf{Likelihood:} The probability of observing the data given a particular event.
+    \item \textbf{Posterior Probability:} The probability of an event after observing the data.  Calculated using Bayes' theorem.
+    \item \textbf{Bayes' Theorem:} A theorem relating prior probability, likelihood, and posterior probability.
+    \item \textbf{Bayesian Update:} The process of updating a probability distribution based on new data.
+    \item \textbf{Variational Inference:} An approximation method for performing Bayesian inference in complex models.
+\end{itemize}
+
+\subsection{Fuzzy Logic}
+
+\begin{itemize}
+    \item \textbf{Fuzzy Set:} A set where elements have degrees of membership (between 0 and 1).
+    \item \textbf{Membership Function:} A function defining the degree of membership of an element in a fuzzy set.
+    \item \textbf{Fuzzy Logic Operations:}  Logical operations (AND, OR, NOT) extended to fuzzy sets.
+    \item \textbf{Fuzzy Truth Value:} A truth value between 0 and 1, representing degrees of belief or uncertainty.
+\end{itemize}
+
+
+\subsection{Spatiotemporal Digests}
+
+\begin{itemize}
+    \item \textbf{Spatiotemporal Region ($X_r$): } A subset of spacetime.
+    \item \textbf{Raster Recording ($R$): } A function mapping a spatiotemporal region to a set of data values.
+    \item \textbf{Spatiotemporal Digest ($S$): } A function mapping a spatiotemporal region to a digest value, typically a cryptographic hash, that is computationally infeasible to invert.
+    \item \textbf{Strong Verification ($V$): } A function that compares a raster recording with a spatiotemporal digest to verify authenticity.
+\end{itemize}
+
+\subsection{Additional Terms}
+
+\begin{itemize}
+    \item \textbf{Confidence Score ($T_i$): } A scalar value in the range [0, 1], representing the degree of belief in the truthfulness of a narrative.
+    \item \textbf{Asymmetry Function ($A(v_i, v_j)$): } A function measuring the degree of asymmetry between two nodes in a network.
+    \item \textbf{Neighborhood ($N(i)$): } The set of nodes directly connected to node $i$ in a graph.
+    \item \textbf{Sigmoid Function:} A function that maps a real number to a value between 0 and 1. Often used to introduce non-linearity in neural networks.
+\end{itemize}
+
+
+
+\section{Mathematical Formulas (Continued)}
+
+\subsection{Additional Formulas}
+
+\begin{enumerate}
+    \item \textbf{Convergence Rate:}
+    \[
+    CR(N_i, T, t) = -\frac{d}{dt} [d(F_i(t), F_t(t))]
+    \]
+    \item \textbf{Chiral Score (refined): }
+    \[
+    CS(N_i, N_j) = w_f sim(F_i, F_j) + w_c sim(C_i, C_j) + w_t |T_i - T_j|
+    \]
+    \item \textbf{Orthogonal Score (refined): }
+    \[
+    OS(N_i, N_j) = 1 - |CS(N_i, N_j)|
+    \]
+\end{enumerate}
+
+
+\section{Conjectures (Continued)}
+
+\subsection{Chiral Convergence Conjecture (refined)}
+
+In a multi-agent system performing narrative synthesis, the convergence towards a higher confidence shared understanding of truth is accelerated by the presence and resolution of chiral and orthogonal relationships between narratives, where these relationships are defined by a combination of feature similarity, contextual similarity, and confidence discrepancies.  Furthermore, this convergence is optimized through a reinforcement learning process that rewards agents for increasing narrative confidence, synthesizing higher-confidence narratives, resolving chiral tensions, and integrating orthogonal perspectives.
+
+
+\end{document}
+
