@@ -1,0 +1,37 @@
+graph TD
+    subgraph "Biological System (Rat)"
+        Rat["Rat (In Vivo)"] -- Brain Activity --> BCI1["High-Res BCI"]
+        BCI1 -- Neural Decoding --> NeuralCode["Neural Code (Qualia Representation)"]
+        
+        StimulusRat["Stimulus (Pleasure/Pain)"] --> Rat
+        
+        RatBehavior["Rat Behavior (Observable)"]
+    end
+
+    subgraph "Artificial System (AI + Quantum)"
+        QuantumComp["Quantum Sentience Platform"] -- Generates --> SimulatedQualia["Simulated Qualia (Quantum State)"]
+        SimulatedQualia -- Encoding --> AIQualiaCode["AI Qualia Code"]
+
+        AI["AI System (Agent)"] -- Controls --> AIAgent["AI Agent (Embodied)"]
+        AIAgent --> AIBehavior["AI Behavior (Observable)"]
+
+        StimulusAI["Controlled Stimulus (Simulated)"] --> AIAgent
+        AIAgent --> ActionFeedback["Action Feedback to AI"]
+
+        subgraph "Bi-Directional Bridge"
+          NeuralCode -- Transfer --> CodeTranslator1["Code Translator (Neural to AI)"]
+          CodeTranslator1 -- Translated AI Code --> QuantumComp
+
+          AIQualiaCode -- Transfer --> CodeTranslator2["Code Translator (AI to Neural)"]
+          CodeTranslator2 -- Translated Neural Code --> BCI2["Stimulation BCI"]
+          BCI2 -- Direct Neural Stimulation --> Rat
+        end
+    end
+
+    RatBehavior & AIBehavior --> Comparator["Behavioral Comparator (Cross-Species/System)"]
+
+    style QuantumComp fill:#ccf,stroke:#888,stroke-width:2px
+    style BCI1 fill:#aaf,stroke:#666,stroke-width:2px
+    style BCI2 fill:#aaf,stroke:#666,stroke-width:2px
+    style CodeTranslator1 fill:#faa,stroke:#666,stroke-width:2px
+    style CodeTranslator2 fill:#faa,stroke:#666,stroke-width:2px
